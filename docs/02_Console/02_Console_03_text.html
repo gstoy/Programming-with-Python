@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Текстови стойности &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Четене на данни" href="02_Console_04_reading.html" />
+    <link rel="prev" title="Програми Python" href="02_Console_02_programs.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Текстови стойности<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>В допълнение към целите и реални числа, един от основните типове данни в програмирането е текст. Текстовите данни се наричат низ. В допълнение към буквите те могат да съдържат всички други символи, използвани в текста: препинателни знаци, скоби, числа, математически оператори, различни специални символи като%, $, ^. &amp; т.н.</p>
+<p>Текстовите стойности се записват между кавички. Наричаме текста под кавички текст константа или буквален. Единични кавички “…” и двойни “…” могат да се използват еднакво в Python (важно е само кавичките да са от същия тип в началото и в края на низа). Например:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="s1">&#39;One text&#39;</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot;Another text&quot;</span>
+</pre></div>
+</div>
+<p>Ще използваме думата низ за типа текстови данни, както и за всеки израз, чиято стойност е този тип. Най-важните примери за низови изрази са текстови константи (буквали) и променливи, които съдържат текст.</p>
+<div class="section" id="id2">
+<h2>Извеждане на текст<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Низовете се извеждат по същия начин като числовите данни. Низът, който искаме да изведем, е просто посочен като аргумент за функция print ().</p>
+
+<div data-childcomponent="console__text_hello" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__text_hello data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+print("Hello world!")
+</textarea>
+</div>
+<p>Когато функцията print () има множество аргументи, тези аргументи могат да бъдат от различни видове:</p>
+
+<div data-childcomponent="console__text_compute" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__text_compute data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+print('2+2 =', 2+2)
+</textarea>
+</div>
+<p>Когато използваме множество аргументи, ги пишем разделени със запетаи (както при всяка функция). Стойностите на всички посочени аргументи ще бъдатизведени в един и същ ред и ще бъдат разделени с едно интервал.</p>
+</div>
+<div class="section" id="id3">
+<h2>Повече за извежданите(принтирани) числа<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Понякога изведеният резултат изглежда нечетлив:</p>
+
+<div data-childcomponent="console__text_format1a" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__text_format1a data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+print(5/3)
+</textarea>
+</div>
+<p>Най-често не се нуждаем от всички тези цифри. Реалните числа могат да изглеждат по-четими, ако използваме функцията за форматиране. С тази функция (освен всичко друго) можем да определим колко цифри след десетичната запетая, която искаме да покажем:</p>
+
+<div data-childcomponent="console__text_format1b" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__text_format1b data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+x = 5/3
+s = format(x, '.2f')
+print(s)
+</textarea>
+</div>
+<p>За да определим броя на десетичните знаци за показване, ние нарекохме функцията за формат така: първият аргумент на функцията е стойността, която отпечатваме, а вторият аргумент е описанието на формата за печат. В това описание частта „.2“ означава, че искаме два десетични знака, а частта „f“, съкратено от float, означава, че даваме описание за реално число (видът на реалните числа се нарича float). Функцията връща низ, в който е написано числото x, както е посочено.</p>
+<p>Обърнете внимание, че този форматиран печат не променя стойността на променливата x.</p>
+<p>Разбихме примера на стъпки, за да го направим по-ясен, въпреки че той може да бъде написан и в един ред код. Например, за да отпечатате с 4 десетични знака:</p>
+
+<div data-childcomponent="console__text_format1c" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__text_format1c data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+print(format(5/3, '.4f'))
+</textarea>
+</div>
+<hr class="docutils" />
+<p>Когато показваме множество реални числа едно под друго, можем да ги направим по-четими, като подравним десетичните знаци. Например този начин на печат не е лесно разбираем:</p>
+
+<div data-childcomponent="console__text_format2a" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__text_format2a data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+print(-1.23)
+print(7251.7)
+print(84.15)
+</textarea>
+</div>
+<p>За да получим по-четим външен вид, можем да използваме функцията за формат така:</p>
+
+<div data-childcomponent="console__text_format2b" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__text_format2b data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+print(format(-1.23, '8.2f'))
+print(format(7251.7, '8.2f'))
+print(format(84.15, '8.2f'))
+</textarea>
+</div>
+<p>В описанието „8.2f“ числото 8 означава, че текстовата версия на дадения номер трябва да бъде подплатена с ляво разстояние (ако е необходимо), за да заеме общо 8 места. Други части от описанието имат същото значение като преди.</p>
+<p>Функцията за формат има и много други функции, но тук няма да ги използваме.</p>
+</div>
+<div class="section" id="string-operations">
+<h2>Стринг операции (String operations)<a class="headerlink" href="#string-operations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="joining-strings">
+<h3>Свързване на символни низове (joining strings)<a class="headerlink" href="#joining-strings" title="Permalink to this headline">¶</a></h3>
+<p>Низовете могат да бъдат съединени заедно с операция за свързване на низове. Тази операция се обозначава със знака +, точно както операцията на сумиране, така че в програмирането конкатенацията често неформално се нарича добавяне на низове.</p>
+
+<div data-childcomponent="console__text_concat1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__text_concat1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+s = 'continu' + 'ation'
+print(s)
+</textarea>
+</div>
+<p>Понякога може да имаме цяло число или истинско число, което да се изтрие в низ, така че е важно да разберем кога знакът се отнася за добавянето на числа и кога свързване на низове. Например в следната програма, първото a + b е добавянето на числа, а второто е добавянето на низове. Съответно, отпечатаните резултати също се различават (изпробвайте).</p>
+
+<div data-childcomponent="console__text_concat2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__text_concat2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = 14.2
+b = 1
+print(a + b)
+
+a = '14.2'
+b = '1'
+print(a + b)
+</textarea>
+</div>
+<p>Има вероятност от време на време да бъдете объркани от резултата при изпълнение на програма. Резултатът може да е различен от очакваното по много причини, а една от възможностите е, че неволно сте добавили низове вместо числа.</p>
+<p>Символът + може да стои между два числови израза или между два низа, но не и между низ и число (в произволен ред). Такива комбинации водят до TypeError (опитайте го).</p>
+
+<div data-childcomponent="console__text_concat3" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__text_concat3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+print('2' + 2)
+</textarea>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Умножение на низове<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Strings can also be multiplied. This means that it is allowed to multiply a string by an integer (either from left or right), and the result is a new string, which is obtained by repeating a given string a given number of times.</p>
+<p>Низовете също могат да бъдат умножени. Това означава, че е позволено да се умножи низ по цяло число (отляво или отдясно), а резултатът е нов низ, който се получава чрез повтаряне на даден низ определен брой пъти.
+В следващия пример подчертаваме числата с ред и този ред се получава в резултат на умножаването на низа “-” с 12.</p>
+
+<div data-childcomponent="console__text_str_mult" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__text_str_mult data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = 1.23958
+b = 5467251.707256
+c = 384.150576
+total = a + b + c
+print(format(a, '12.2f'))
+print(format(b, '12.2f'))
+print(format(c, '12.2f'))
+print(12 * '-')
+print(format(total, '12.2f'))
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Въпроси и задачи<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="console__text_quiz_format">
+    <span data-component="question">Q-9: Свържете *format* функцията с резултатите. Разстоянията са представени с '_' , за да са по-видими</span>
+	<span data-component=feedback>Try again!</span>
+
+    <li data-component="draggable" id="console__text_quiz_format_drag1">'12.34'</li>
+    <li data-component="dropzone" for="console__text_quiz_format_drag1">format(12.34, '.2f')</li>
+
+    <li data-component="draggable" id="console__text_quiz_format_drag2">'__12.34'</li>
+    <li data-component="dropzone" for="console__text_quiz_format_drag2">format(12.34, '7.2f')</li>
+
+    <li data-component="draggable" id="console__text_quiz_format_drag3">'_12.34'</li>
+    <li data-component="dropzone" for="console__text_quiz_format_drag3">format(12.34, '6.2f')</li>
+
+    <li data-component="draggable" id="console__text_quiz_format_drag4">'__12.3'</li>
+    <li data-component="dropzone" for="console__text_quiz_format_drag4">format(12.34, '6.1f')</li>
+
+    <li data-component="draggable" id="console__text_quiz_format_drag5">'12.3'</li>
+    <li data-component="dropzone" for="console__text_quiz_format_drag5">format(12.34, '.1f')</li>
+</ul></div>
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="console__text_quiz_quotes">
+            <p>Q-10: Кое е грешното?</p>
+
+            <li data-component="answer"  id="console__text_quiz_quotes_opt_a">s = 'a' + "b"</li><li data-component="feedback" id="console__text_quiz_quotes_opt_a">Try again</li>
+            
+            <li data-component="answer" data-correct id="console__text_quiz_quotes_opt_b">s = 'ab"</li><li data-component="feedback" id="console__text_quiz_quotes_opt_b">Correct!</li>
+            
+            <li data-component="answer"  id="console__text_quiz_quotes_opt_c">s = 'ab'</li><li data-component="feedback" id="console__text_quiz_quotes_opt_c">Try again</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="console__text_quiz_tralala">
+            <p>Q-11: Кое от следните ще изведе `` tra-la-la ‘’? (Маркирайте всички правилни отговори)</p>
+
+            <li data-component="answer" data-correct id="console__text_quiz_tralala_opt_a">print('tra' + 2 * '-la')</li><li data-component="feedback" id="console__text_quiz_tralala_opt_a"></li>
+            
+            <li data-component="answer"  id="console__text_quiz_tralala_opt_b">print('tra-' + 2 * 'la-')</li><li data-component="feedback" id="console__text_quiz_tralala_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="console__text_quiz_tralala_opt_c">print('tra-' + 'la-' + 'la')</li><li data-component="feedback" id="console__text_quiz_tralala_opt_c"></li>
+            
+            <li data-component="answer" data-correct id="console__text_quiz_tralala_opt_d">print('tra-' + 'la-la')</li><li data-component="feedback" id="console__text_quiz_tralala_opt_d"></li>
+            
+            <li data-component="answer"  id="console__text_quiz_tralala_opt_e">print('tra-la-' + '-la')</li><li data-component="feedback" id="console__text_quiz_tralala_opt_e"></li>
+            
+
+            </ul>
+            </div>
+            
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="console__text_quiz_nanana">
+    <span data-component="question">Q-12: Свържете изразите с техните стойности</span>
+	<span data-component=feedback>Try again!</span>
+
+    <li data-component="draggable" id="console__text_quiz_nanana_drag1">'NA' * 3 </li>
+    <li data-component="dropzone" for="console__text_quiz_nanana_drag1"> 'NANANA'</li>
+
+    <li data-component="draggable" id="console__text_quiz_nanana_drag2">'N' + 3 * 'A' </li>
+    <li data-component="dropzone" for="console__text_quiz_nanana_drag2"> 'NAAA'</li>
+
+    <li data-component="draggable" id="console__text_quiz_nanana_drag3">'N' * 3 + 'A' </li>
+    <li data-component="dropzone" for="console__text_quiz_nanana_drag3"> 'NNNA'</li>
+
+    <li data-component="draggable" id="console__text_quiz_nanana_drag4">'N' * 3 + 3 * 'A' </li>
+    <li data-component="dropzone" for="console__text_quiz_nanana_drag4">'NNNAAA'</li>
+</ul></div>
+        <div class="course-box course-box-question course-content">
+        <div data-component="fillintheblank" id="console__text_quiz_N_A">
+            <p>Изразът <strong>print((‘N’ + ‘A’) * 2)</strong> ще изведе?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^ *NANA *$", "regexFlags": "", "feedback": "<p>Correct!</p>\n"}, {"regex": "^ *NNAA *$", "regexFlags": "", "feedback": "<p>First, calculate the part in brackets (as with numbers)</p>\n"}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "<p>Try again.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - споделяне на печалбата</strong></p>
+<p>Тримата приятели се съгласиха да разделят печалбите от съвместното предприятие, така че първият да получи 2/7 от печалбата, вторият 1/3, а третият останалата сума. Общата печалба беше 40000. Завършете програмата, която ще отпечата на два десетични знака приходите на всеки от тримата приятели.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__computing_earnings" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__computing_earnings data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+total_earnings = 40000
+first = total_earnings * 2 / 7
+second = 0 # fix the staement
+third = total_earnings - first - second
+# add statement(s) for printing
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Програми Python' data-toggle="tooltip"><a href="02_Console_02_programs.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Четене на данни' data-toggle="tooltip"><a href="02_Console_04_reading.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Програми Python' data-toggle="tooltip"><a href="02_Console_02_programs.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Четене на данни' data-toggle="tooltip"><a href="02_Console_04_reading.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

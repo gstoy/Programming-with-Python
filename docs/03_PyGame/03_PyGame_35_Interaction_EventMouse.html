@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Събития с мишка &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Събития на клавиатурата" href="03_PyGame_36_Interaction_EventKeyboard.html" />
+    <link rel="prev" title="Събития" href="03_PyGame_34_Interaction_Events.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Събития с мишка<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>В примера “превключвател” показахме как можем да реагираме в програма, когато потребителят натисне бутон на мишката. Въпреки че за потребителя едно щракване изглежда като еднократно действие, видяхме, че за компютъра това е последователност от събития, която започва със събитие от типа <em>pg.MOUSEBUTTONDOWN</em>.</p>
+<p>В следващите примери и задачи ще използваме три типа събития, генерирани от мишката:</p>
+<ul class="simple">
+<li><p>Натискане на който и да е бутон на мишката (като в примера с превключвателя), в този случай <em>event.type</em> има стойност <em>pg.MOUSEBUTTONDOWN</em></p></li>
+<li><p>Освобождаване на бутон на мишката, в този случай <em>еvent.type</em> има стойност <em>pg.MOUSEBUTTONUP</em></p></li>
+<li><p>Преместване на мишката, в този случай <em>event.type</em> има стойност <em>pg.MOUSEMOTION</em>. Всъщност при движение на мишката се генерират множество такива събития (всяко от тях описва малко движение на мишката в много кратък интервал от време, така че всяко събитие от този вид обикновено описва движение само на няколко пиксела).</p></li>
+</ul>
+<p>Обектите на събитието, чийто тип е <em>pg.MOUSEBUTTONDOWN</em>, също съдържат допълнителна информация, като например:</p>
+<ul class="simple">
+<li><p><em>event.pos</em> - положението на мишката по време на регистриране на събитието (вече използвано в примера на превключвателя)</p></li>
+<li><p><em>event.button</em> - число от 1 до 5, указващо кой бутон на мишката е натиснат (1 - вляво, 2 - в средата, 3 - вдясно, 4 - превъртете нагоре, 5 - превъртете надолу)</p></li>
+</ul>
+<p>Някои от допълнителните данни за събитията, съдържащи се в <em>pg.MOUSEMOTION</em> обекти са:</p>
+<ul class="simple">
+<li><p>event.pos - позицията на мишката след събитието за движение на мишката</p></li>
+<li><p>event.rel - подредена двойка, която описва колко се е променила позицията на мишката след предишното събитие за движение на мишката</p></li>
+<li><p>event.buttons - списък с три елемента на логически стойности, които определят за всеки от трите бутона на мишката (0 - вляво, 1 - средна, 2 - дясна) дали е натиснат по време на движение на мишката.</p></li>
+</ul>
+<div class="section" id="id2">
+<h2>Обработка на щракване - упражнения<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Може да не сте забелязали, че в програмата “превключване” от предишния урок, светлината може да бъде включена и изключена, като щракнете върху който и да е бутон на мишката. Това е така, защото за всеки бутон на мишката се генерира един и същ тип събитие и не проверихме кой бутон е натиснат, когато събитието се е случило.</p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - ляв бутон като превключвател:</strong></p>
+<p>Копирайте програмата “превключвател” тук, след което я променете, така че светлината да може да се включва и изключва само с левия бутон на мишката.</p>
+
+    </p></div></div>
+<p><strong>Съвет:</strong> Използвайте данните <em>event.button</em>.</p>
+
+<div data-childcomponent="PyGame__interact_switch_left_button" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__interact_switch_left_button data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="# -*- acsection: general-init -*-
+import pygame as pg, pygamebg
+(width, height) = (800, 500)
+canvas = pygamebg.open_window(width, height, &quot;Switch&quot;)
+
+schema_images = (pg.image.load(&apos;Shema1_Off.png&apos;), pg.image.load(&apos;Shema1_On.png&apos;))
+switch_images = (pg.image.load(&apos;SwitchOff.png&apos;), pg.image.load(&apos;SwitchOn.png&apos;))
+bulb_images = (pg.image.load(&apos;BulbOff.png&apos;), pg.image.load(&apos;BulbOn.png&apos;))
+switch_pos = (100, 200)
+bulb_pos = (500, 100)
+
+switch_on = False
+
+def new_frame():
+    canvas.blit(schema_images[switch_on], (0, 0))
+    canvas.blit(switch_images[switch_on], switch_pos)
+    canvas.blit(bulb_images[switch_on], bulb_pos)
+
+def point_in_rectangle(point, upper_left_point, width, height):
+    x, y = point
+    x0, y0 = upper_left_point
+    return x0 &lt;= x and x &lt;= x0 + width and y0 &lt;= y and y &lt;= y0 + height
+    
+# -*- acsection: main -*-
+def handle_event(event):
+    global switch_on
+    # if left mouse button is pressed
+    if event.type == pg.MOUSEBUTTONDOWN and event.button == 1:
+        mouse_point = event.pos
+        if point_in_rectangle(mouse_point, switch_pos, 80, 80):
+            switch_on = not switch_on
+
+pygamebg.frame_loop(10, new_frame, handle_event)
+# -*- acsection: after-main -*-
+"  data-enablecopy="true">
+
+
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - три превключвателя:</strong></p>
+<p>Използвайте части от програмата “превключвател” и създайте програма, която симулира работата на три превключвателя, както е показано в примера.</p>
+
+    </p></div></div>
+<a class="reference internal image-reference" href="../_images/Shema3_Off.png"><img alt="../_images/Shema3_Off.png" src="../_images/Shema3_Off.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/Shema3_On.png"><img alt="../_images/Shema3_On.png" src="../_images/Shema3_On.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/SwitchOff.png"><img alt="../_images/SwitchOff.png" src="../_images/SwitchOff.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/SwitchOn.png"><img alt="../_images/SwitchOn.png" src="../_images/SwitchOn.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/BulbOff.png"><img alt="../_images/BulbOff.png" src="../_images/BulbOff.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/BulbOn.png"><img alt="../_images/BulbOn.png" src="../_images/BulbOn.png" style="width: 50px;" /></a>
+
+<div data-childcomponent="PyGame__interact_switches" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__interact_switches data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="import pygame as pg, pygamebg
+(width, height) = (800, 500)
+canvas = pygamebg.open_window(width, height, &quot;Switches&quot;)
+
+schema_images = (pg.image.load(&apos;Shema3_Off.png&apos;), pg.image.load(&apos;Shema3_On.png&apos;))
+switch_images = (pg.image.load(&apos;SwitchOff.png&apos;), pg.image.load(&apos;SwitchOn.png&apos;))
+bulb_images = (pg.image.load(&apos;BulbOff.png&apos;), pg.image.load(&apos;BulbOn.png&apos;))
+
+switch_on = [False, False, False]
+switch_pos = [(100, 200), (300, 150), (300, 250)]
+bulb_pos = (500, 100)
+
+def new_frame():
+    light_is_on = switch_on[0] and (switch_on[1] or switch_on[2])
+    canvas.blit(schema_images[light_is_on], (0, 0))
+    for i in range(3):
+        canvas.blit(switch_images[switch_on[i]], switch_pos[i])
+    canvas.blit(bulb_images[light_is_on], bulb_pos)
+    
+def point_in_rectangle(point, upper_left_point, width, height):
+    x, y = point
+    x0, y0 = upper_left_point
+    return x0 &lt;= x and x &lt;= x0 + width and y0 &lt;= y and y &lt;= y0 + height
+    
+def handle_event(event):
+    global switch_on
+    if event.type == pg.MOUSEBUTTONDOWN:   # mouse button pressed 
+        mouse_point = event.pos
+        for i in range(3):
+            if point_in_rectangle(mouse_point, switch_pos[i], 80, 80):
+                switch_on[i] = not switch_on[i]
+
+pygamebg.frame_loop(10, new_frame, handle_event)
+"  data-enablecopy="true">
+import pygame as pg, pygamebg
+(width, height) = (800, 500)
+canvas = pygamebg.open_window(width, height, "Switches")
+
+schema_images = (pg.image.load('Shema3_Off.png'), pg.image.load('Shema3_On.png'))
+switch_images = (pg.image.load('SwitchOff.png'), pg.image.load('SwitchOn.png'))
+bulb_images = (pg.image.load('BulbOff.png'), pg.image.load('BulbOn.png'))
+
+switch_on = [False, False, False]
+switch_pos = [(100, 200), (300, 150), (300, 250)]
+bulb_pos = (500, 100)
+
+# finish the program
+</textarea>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Други събития с мишка<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Както бе споменато в началото на този урок, една програма може също така да реагира на събития за освобождаване на бутона на мишката и движение на мишката. За целта е необходимо да се сравни стойността на <em>event.type</em> с константите <em>pg.MOUSEBUTTONUP</em> и <em>pg.MOUSEMOTION</em>. Следват задачи, в които можете да изпробвате това.</p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - рисуване на линии:</strong></p>
+<p>Попълнете програмата, така че да може да очертава прави линии, както в примера.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="PyGame__interact_mouse_lines1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__interact_mouse_lines1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="import pygame as pg, pygamebg
+(width, height) = (400, 400)
+canvas = pygamebg.open_window(400, 400, &quot;Lines with mouse&quot;)
+
+mosue_pos = (0, 0)
+line_start = mosue_pos
+line_is_being_drawn = False
+previous_lines = []
+
+def new_frame():
+    canvas.fill(pg.Color(&quot;white&quot;)) # paint canvas
+    if line_is_being_drawn:
+        pg.draw.line(canvas, pg.Color(&apos;black&apos;), line_start, mosue_pos)
+    for a, b in previous_lines:
+        pg.draw.line(canvas, pg.Color(&apos;black&apos;), a, b)
+
+def handle_event(event):
+    global line_is_being_drawn, line_start, mosue_pos
+    if event.type == pg.MOUSEBUTTONDOWN:
+        line_is_being_drawn = True
+        line_start = event.pos
+    elif event.type == pg.MOUSEBUTTONUP:
+        line_is_being_drawn = False
+        line_ends = (line_start, event.pos)
+        previous_lines.append(line_ends)
+    elif event.type == pg.MOUSEMOTION:
+        mosue_pos = event.pos
+
+pygamebg.frame_loop(30, new_frame, handle_event)
+"  data-enablecopy="true">
+import pygame as pg, pygamebg
+(width, height) = (400, 400)
+canvas = pygamebg.open_window(400, 400, "Lines with mouse")
+
+mosue_pos = (0, 0)
+line_start = mosue_pos
+line_is_being_drawn = False
+previous_lines = []
+
+def new_frame():
+    canvas.fill(pg.Color("white")) # paint canvas
+    if line_is_being_drawn:
+        pg.draw.line(canvas, pg.Color('black'), line_start, mosue_pos)
+
+    for a, b in previous_lines:
+        pg.draw.line(canvas, pg.Color('black'), a, b)
+
+
+def handle_event(event):
+    global line_is_being_drawn, line_start, mosue_pos
+
+
+    # add statements here that work as follows:
+
+    # if the event type is "mouse button down":
+    #     the line drawing mode is switched on
+    #     we start the line at the current position of the mouse
+    # otherwise, if the event type is "mouse button going up":
+    #     the line drawing mode is switched off
+    #     the new line is from the memorized start of the line to the current position of the mouse
+    #     add a new line to the list of previous lines
+    # otherwise, if the event type is "moving mouse":
+    #     in the mouse_pos variable, remember the current position of the mouse
+
+pygamebg.frame_loop(30, new_frame, handle_event)
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - рисуване на линии с изтриване:</strong></p>
+<p>Копирайте програмата за рисуване на линии по-долу, след което добавете възможност за изтриване на всички линии с десен бутон.</p>
+
+    </p></div></div>
+<p><strong>Съвет:</strong> За да разграничите левия и десния бутон на мишката в програмата, данните <em>event.button</em> трябва да се използват отново. Кодът във функцията <em>handle_event</em> сега трябва да изглежда така:</p>
+
+<div data-childcomponent="PyGame__interact_mouse_lines2_part" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__interact_mouse_lines2_part data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+    if the event type is "mouse button going down":
+        if button 1 (left button) is pressed
+            the line drawing mode is switched on
+            the new line is from the memorized start of the line to the current position of the mouse
+        if button 3 (right button) is pressed
+            empty the list of previous lines
+    otherwise, if the event type is "releasing mouse button":
+        if button 1 (left button) is pressed
+            the line drawing mode is switched off
+            the new line is from the memorized start of the line to the current position of the mouse
+            add a new line to the list of previous lines
+    otherwise, if the event type is "move mouse":
+        remember the current position of the mouse in the mouse_pos variable
+</textarea>
+</div>
+
+<div data-childcomponent="PyGame__interact_mouse_lines2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__interact_mouse_lines2 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="import pygame as pg, pygamebg
+(width, height) = (400, 400)
+canvas = pygamebg.open_window(width, height, &quot;Lines with mouse&quot;)
+
+mosue_pos = (width // 2, height // 2)
+line_start = mosue_pos
+line_is_being_drawn = False
+previous_lines = []
+
+def new_frame():
+    canvas.fill(pg.Color(&quot;white&quot;)) # paint canvas
+    if line_is_being_drawn:
+        pg.draw.line(canvas, pg.Color(&apos;black&apos;), line_start, mosue_pos)
+    for a, b in previous_lines:
+        pg.draw.line(canvas, pg.Color(&apos;black&apos;), a, b)
+
+def handle_event(event):
+    global line_is_being_drawn, line_start, previous_lines, mosue_pos
+    if event.type == pg.MOUSEBUTTONDOWN:
+        if (event.button  == 1): # left
+            line_is_being_drawn = True
+            line_start = event.pos
+        if (event.button  == 3): # right
+            previous_lines = []
+    elif event.type == pg.MOUSEBUTTONUP:
+        if (event.button  == 1): # left
+            line_is_being_drawn = False
+            line_ends = (line_start, event.pos)
+            previous_lines.append(line_ends)
+    elif event.type == pg.MOUSEMOTION:
+        mosue_pos = event.pos
+
+pygamebg.frame_loop(30, new_frame, handle_event)
+"  data-enablecopy="true">
+
+
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - влачене:</strong></p>
+<p>Следващата програма показва как да се позволи на потребителя на програмата да влачи обекти.</p>
+<p>Изпробвайте програмата (плъзнете ябълките в кошницата) и се опитайте да я разберете, след което отговорете на въпросите по-долу.</p>
+
+    </p></div></div>
+<a class="reference internal image-reference" href="../_images/apple.png"><img alt="../_images/apple.png" src="../_images/apple.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/basket.png"><img alt="../_images/basket.png" src="../_images/basket.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/drag_scene.png"><img alt="../_images/drag_scene.png" src="../_images/drag_scene.png" style="width: 50px;" /></a>
+
+<div data-childcomponent="PyGame__interact_drag" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__interact_drag data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="import pygame as pg, pygamebg, random
+(width, height) = (600, 400)
+canvas = pygamebg.open_window(width, height, &quot;Dragging with mouse&quot;)
+
+basket_image  = pg.image.load(&quot;basket.png&quot;) # read the basket image
+apple_image = pg.image.load(&quot;apple.png&quot;)  # read the apple image
+scene_image = pg.image.load(&quot;drag_scene.png&quot;) # read the scene image
+apple_positions = []
+for i in range(5):
+    apple_positions.append((random.randint(50, 200), random.randint(80, 130)))
+basket_pos = (300, 200)
+i_apple = -1             # which apple is currently being draged (-1 means none)
+done = False
+
+def mouse_is_on_image(mouse_pos, image_pos, image):
+    x, y = mouse_pos
+    x0, y0 = image_pos # upper left corner
+    dx, dy = image.get_width(), image.get_height() # image size
+    return x0 &lt;= x and x &lt;= x0 + dx and y0 &lt;= y and y &lt;= y0 + dy
+
+def new_frame():    
+    canvas.blit(scene_image, (0, 0)) # display scene
+    if not done:
+        canvas.blit(basket_image, basket_pos) # display the basket
+        for apple_pos in apple_positions: # display apples
+            canvas.blit(apple_image, apple_pos)
+
+def handle_event(event):
+    global apple_positions, i_apple, done
+    if event.type == pg.MOUSEBUTTONDOWN:     # pritisnuto je dugme miša
+        for i in range(len(apple_positions)):
+            # if mouse is on one of the apples
+            if mouse_is_on_image(event.pos, apple_positions[i], apple_image):
+                i_apple = i    # start dragging
+                
+    elif event.type == pg.MOUSEBUTTONUP:     # mouse button released
+        if mouse_is_on_image(event.pos, basket_pos, basket_image):
+            del apple_positions[i_apple]
+            if len(apple_positions) == 0:
+                done = True
+        i_apple = -1                           # finish dragging
+        
+    elif event.type == pg.MOUSEMOTION:       # mouse moved
+        if i_apple &gt;= 0:                       # if dragging is in progress
+            # calculate the position of the apple (upper left corner of the image)
+            # so that the center of the apple is at the mouse
+            mouse_x, mouse_y = event.pos
+            x = mouse_x - apple_image.get_width() // 2
+            y = mouse_y - apple_image.get_height() // 2
+            apple_positions[i_apple] = (x, y)
+
+pygamebg.frame_loop(30, new_frame, handle_event)
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pygame__interact_quiz_drag1">
+            <p>Q-78: Каква е променливата <em>i_apple</em> в програмата?</p>
+
+            <li data-component="answer"  id="pygame__interact_quiz_drag1_opt_a">индексът на ябълката, която рисуваме</li><li data-component="feedback" id="pygame__interact_quiz_drag1_opt_a">Опитай пак</li>
+            
+            <li data-component="answer" data-correct id="pygame__interact_quiz_drag1_opt_b">индексът на ябълката, която влачим</li><li data-component="feedback" id="pygame__interact_quiz_drag1_opt_b">Вярно</li>
+            
+            <li data-component="answer"  id="pygame__interact_quiz_drag1_opt_c">общ брой ябълки</li><li data-component="feedback" id="pygame__interact_quiz_drag1_opt_c">Опитай пак</li>
+            
+            <li data-component="answer"  id="pygame__interact_quiz_drag1_opt_d">броя на ябълките, останали на дървото</li><li data-component="feedback" id="pygame__interact_quiz_drag1_opt_d">Опитай пак</li>
+            
+
+            </ul>
+            </div>
+            
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="pygame__interact_quiz_drag2">
+    <span data-component="question">Q-79: Съберете проверките на програмата с техните значения.</span>
+	<span data-component=feedback>Опитай пак!</span>
+
+    <li data-component="draggable" id="pygame__interact_quiz_drag2_drag1">if mouse_is_on_image(event.pos, basket_pos, basket_image):</li>
+    <li data-component="dropzone" for="pygame__interact_quiz_drag2_drag1">whether the apple should be deleted</li>
+
+    <li data-component="draggable" id="pygame__interact_quiz_drag2_drag2">if mouse_is_on_image(event.pos, apple_positions[i]</li>
+    <li data-component="dropzone" for="pygame__interact_quiz_drag2_drag2">whether the user "took" the apple</li>
+
+    <li data-component="draggable" id="pygame__interact_quiz_drag2_drag3">if len(apple_positions) == 0:</li>
+    <li data-component="dropzone" for="pygame__interact_quiz_drag2_drag3">whether the game is over</li>
+
+    <li data-component="draggable" id="pygame__interact_quiz_drag2_drag4">if i_apple >= 0:</li>
+    <li data-component="dropzone" for="pygame__interact_quiz_drag2_drag4">whether a drag is ongoing</li>
+</ul></div>
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pygame__interact_quiz_drag3">
+            <p>Q-80: Как различаваме между влаченето от обикновено движение на мишката в дадена програма?</p>
+
+            <li data-component="answer"  id="pygame__interact_quiz_drag3_opt_a">четем, че бутонът на мишката е надолу по време на движение</li><li data-component="feedback" id="pygame__interact_quiz_drag3_opt_a">Това не е удобен начин, тъй като бутонът може да бъде натиснат на празно място (потребителят не е "взел" обекта, който трябва да се влачи)</li>
+            
+            <li data-component="answer"  id="pygame__interact_quiz_drag3_opt_b">влаченето е отделен тип събитие</li><li data-component="feedback" id="pygame__interact_quiz_drag3_opt_b">Не, няма такъв тип събития</li>
+            
+            <li data-component="answer" data-correct id="pygame__interact_quiz_drag3_opt_c">когато обикновеното движение на мишката индексът на "ябълката, която влачим" е -1</li><li data-component="feedback" id="pygame__interact_quiz_drag3_opt_c">Вярно</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Събития' data-toggle="tooltip"><a href="03_PyGame_34_Interaction_Events.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Събития на клавиатурата' data-toggle="tooltip"><a href="03_PyGame_36_Interaction_EventKeyboard.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Събития' data-toggle="tooltip"><a href="03_PyGame_34_Interaction_Events.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Събития на клавиатурата' data-toggle="tooltip"><a href="03_PyGame_36_Interaction_EventKeyboard.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

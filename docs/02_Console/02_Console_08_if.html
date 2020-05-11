@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Branching statements ( операции за разклоняване) &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Сложно разклоняване" href="02_Console_09_elif.html" />
+    <link rel="prev" title="Математически функции - упражнения" href="02_Console_07_number_functions_practice.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="branching-statements">
+<h1>Branching statements ( операции за разклоняване)<a class="headerlink" href="#branching-statements" title="Permalink to this headline">¶</a></h1>
+<p>В уроците по Карел всеки път, когато искахме Карел да продължи напред, трябваше първо да проверим дали Карел може да продължи. Тези проверки бяха необходими, защото ако се опитаме да преместим робота напред, когато площадът пред него не съществува, програмата ще докладва за грешка и ще спре да работи. По същата причина бяхме проверили дали има топка на квадрат преди да я вземем и проверявахме дали Карел има топка със себе си, преди да пусне топката.</p>
+<p>По подобен начин в програмите с числа често се налага да сравняваме две стойности, тоест да определим дали те са равни, дали едната е по-малка от другата, различна от другата и други подобни. В зависимост от резултата от сравнението, програмата може да продължи да се изпълнява по различни начини.</p>
+<p>Някои от символите, използвани за сравнение, са същите като в математиката (например <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>) а някои не са. Следващата таблица дава обозначение на всички стандартни сравнения, използвани в математиката и в Python (а също и в много други езици за програмиране).</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Math</p></th>
+<th class="head"><p>Python</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(а &lt; b\)</span></p></td>
+<td><p>a &lt; b</p></td>
+<td><p>a is less than b</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a \leq b\)</span></p></td>
+<td><p>a &lt;= b</p></td>
+<td><p>a is less than or equal to b</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a &gt; b\)</span></p></td>
+<td><p>a &gt; b</p></td>
+<td><p>a is greater than b</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a \geq b\)</span></p></td>
+<td><p>a &gt;= b</p></td>
+<td><p>a is greater than or equal to b</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a = b\)</span></p></td>
+<td><p>a == b</p></td>
+<td><p>a is equal to b</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a \neq b\)</span></p></td>
+<td><p>a != b</p></td>
+<td><p>a is not equal to b</p></td>
+</tr>
+</tbody>
+</table>
+<p>Нотацията <span class="math notranslate nohighlight">\(a&lt;b\)</span> може да се разбира като израз, чиято стойност е вярна или невярна във всеки случай. Тези стойности са написани в Python като True и False и те са логически константи, тоест константи от типа bool, който наричаме логически тип. Изражения, чиято стойност е вярна или невярна (логически тип), се наричат логически изрази. Всички изрази в таблицата по-горе са логически изрази (по-късно ще видим повече логически изрази).</p>
+<div class="section" id="if">
+<h2>If оператор<a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<p>Операторът <em>if</em> вече беше въведено в уроците от Карел, нека си припомним:</p>
+<p>Използва се за определяне на коя от двете групи оператори да се изпълни. В Python пише така:</p>
+
+<div data-childcomponent="console__if_else_syntax" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__if_else_syntax data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+if condition:
+    statement_a1
+    ...
+    statement_ak
+else:
+    statement_b1
+    ...
+    statement_bm
+</textarea>
+</div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Значение на оператора if:</strong></p>
+<p>Изявлението, написано по-горе, означава: ако условието е изпълнено, изпълнете statement_a1,… statement_ak, в противен случай изпълнете инструкция_b1,… statement_bm.</p>
+<p><strong>Правила за писане (синтаксис) на оператора if</strong></p>
+<ul class="simple">
+<li><p>След думата <code class="docutils literal notranslate"><span class="pre">if</span></code>, се пише логически израз и в края на реда се изисква символът <code class="docutils literal notranslate"><span class="pre">:</span></code> (двоеточие).</p></li>
+<li><p>В следващите редове, отредени за същия брой интервали (обикновено 4), се записват изразите, които трябва да бъдат изпълнени, ако логическият израз се изчисли на True. Може да има едно или повече от тези твърдения.</p></li>
+<li><p>След командите, които се изпълняват, ако условието е изпълнено, се изписва думата else и отново символът: (двоеточие). Else се пише на същото ниво на отстъпи като if.</p></li>
+<li><p>В следващите редове, отредени за същия брой интервали, напишете командите, които трябва да се изпълнят, ако логическият израз се изчисли на False. Може да има едно или повече от тези твърдения.</p></li>
+</ul>
+<p>Операторът if се нарича също операция за разклоняване, тъй като потокът на изпълнение на програмата за този оператор се разклонява: следващият оператор за изпълнение зависи от стойността на логическия израз в условието. Групи от изрази след думата, ако или друго, следователно се наричат също клонове на израза if.</p>
+
+    </p></div></div>
+<p>В случай, че програмата не се нуждае от нищо, когато условието на оператора if не е изпълнено, тоест когато не се нуждаем от друг клон на оператора if, можем да го пропуснем:</p>
+
+<div data-childcomponent="console__if_syntax" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__if_syntax data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+if condition:
+    statement_a1
+    ...
+    statement_ak
+</textarea>
+</div>
+<p>Ще използваме тази кратка форма на оператора if по-късно.</p>
+<div class="section" id="id1">
+<h3>If - примери и задачи<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Пример - кой е по-млад:</strong></p>
+<p>Петър и Марк искат да играят на билярд. Те се съгласиха, че по-младият играч играе първи. Напишете програма, която чете възрастта на Петър и Марк (които не са равни) и отпечатва кой ще направи първия ход.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__branching_younger" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__branching_younger data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+peter = int(input("How old is Peter: "))
+mark = int(input("How old is Mark: "))
+if peter < mark:
+    print('Peter plays first.')
+else:
+    print('Mark plays first.')
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Пример - опаковане:</strong></p>
+<p>Яйцата във фермата са опаковани в кутии по 10 опаковки и пълните кутии се изпращат до магазина. Напишете програма, която взема броя на яйцата, готови за опаковане, и отпечатва дали всички яйца могат да бъдат опаковани и изпратени до магазина, или дали няколко яйца ще останат разопаковани временно.</p>
+
+    </p></div></div>
+<p>Тук трябва да проверим дали броят на яйцата се дели на 10. По тази причина използваме оператора%, който дава остатъка след разделянето. Ако остатъкът след разделяне на броя на яйцата на 10 е равен на нула, всички яйца могат да бъдат опаковани и изпратени</p>
+
+<div data-childcomponent="console__branching_eggs" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__branching_eggs data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+num_eggs = int(input("How many eggs: "))
+if num_eggs % 10 == 0:
+    print('All eggs can be sent.')
+else:
+    print('Some eggs will remain.')
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - страна на улицата:</strong></p>
+<p>Четните номера на къщите са от дясната страна на улицата, а нечетни номера на къщите вляво. Напишете програма, която приема домашен номер и отпечатва на коя страна на улицата е номерът.</p>
+
+    </p></div></div>
+<p>Тук е необходимо да се проучи дали даденото число се дели на 2. Задачата е подобна на предходната - ако остатъкът от разделянето на дадения номер на къща с 2 е равен на нула, числото е от дясната страна на улицата , в противен случай е от лявата страна.</p>
+
+<div data-childcomponent="console__branching_home_number" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__branching_home_number data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+number = int(input("What is the house number: "))
+# finish the program
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - кино:</strong></p>
+<p>Имате 10 евро със себе си. Напишете програма, която взема цената на билета за филма и цената на пуканките, след което разпечатва дали имате достатъчно пари и за билета, и за пуканките.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__branching_cinema" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__branching_cinema data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+ticket_price = int(input("How much for the ticket: "))
+popcorn_price = int(input("How much for the popcorn: "))
+# finish the program
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Логически изрази<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>В някои задачи трябва да изразим условия, които са по-сложни, отколкото просто да сравняваме две стойности. Думите <strong>and</strong>, <strong>or</strong> и <strong>not</strong> се използват, за да се свържат по-простите термини, а Python използва точно същите думи за това. Ето как да се оценят такива сложни условия. Ако <em>a</em> и <em>b</em> са някакви условия, то:</p>
+<ul class="simple">
+<li><p>условието <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">and</span> <span class="pre">b</span></code> ще бъде изпълнено ако и двете условия <em>a</em> и <em>b</em> са изпълнени;</p></li>
+<li><p>условие <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">or</span> <span class="pre">b</span></code> ще бъде изпълено ако поне едно от условията <em>a</em> и <em>b</em> е изпълнено;</p></li>
+<li><p>условието <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">a</span></code> ще бъде изпъленено ако условието <em>a</em> не е изпъленено(вече споменахме това по време на уроците с Карел);</p></li>
+</ul>
+<p>Тези условия могат да бъдат комбинирани допълнително в още по-сложни според нуждите на задачата. В сложни условия можем да използваме скоби, за да повлияем на реда, в който се изчисляват условията (също когато не сме сигурни кой е редът по подразбиране) и да направим програмата по-ясна за другите хора, които я четат. Ако няма скоби в сложното състояние, не се прилага първо, след това и, и накрая или.</p>
+<div class="section" id="id3">
+<h3>Логически изрази - примери<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Пример - високосна година:</strong></p>
+<p>Напишете програма, която отпечатва дали дадена година (между 1800 и 2200, включително граници) е високосна или проста.</p>
+<p>Според григорианския календар се използват следните правила, за да се определи дали една година е обикновена или високосна:</p>
+<ul class="simple">
+<li><p>години, които не се делят на 4 (например 1923, 1070, 2017) са обикновени;</p></li>
+<li><p>години, които се делят на 100, а не на 400 (например 1700, 1800, 1900, 2100, 2200), също са обикновени;</p></li>
+<li><p>всички останали години (например 1984, 2000, 2012) са високосни. Това са години, които се делят на 4, а не на 100, или са делими на 400.</p></li>
+</ul>
+
+    </p></div></div>
+<p>Записвайки тези правила под формата на логически условия, получаваме:</p>
+
+<div data-childcomponent="console__branching_leap_year1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__branching_leap_year1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+year = int(input())
+if (year % 4 > 0) or (year % 100 == 0 and year % 400 > 0):
+    print("Year", year, "is simple.")
+else:
+    print("Year", year, "is leap.")
+</textarea>
+</div>
+<p>Получаваме еднакво добро решение, ако използваме описанието за високосните години, дадено в правило 3 (проверете, като мислите чрез него и като изпробвате и двете програми, че получаваме същия резултат):</p>
+
+<div data-childcomponent="console__branching_leap_year2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__branching_leap_year2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+year = int(input())
+if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+    print("Year", year, "is leap.")
+else:
+    print("Year", year, "is simple.")
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Пример - работно време:</strong></p>
+<p>Работното време на един магазин за сувенири е от 7 до 11 сутринта и от 17 до 22 вечерта (като се има предвид, че той работи в 7:00 и в 17:00 рязко и не работи в 11:00 и в 22:00). Петър попадна в магазина в H часа и M минути. Напишете програма, която приема числото H (от 0 до 23) и отговаря дали Петър попадна в магазина по време на работното време.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__branching_working_hours1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__branching_working_hours1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+h = int(input())
+if (7 <= h and h < 11) or (17 <= h and h < 22):
+    print("Peter came across during office hours.")
+else:
+    print("Peter came across out of business hours.")
+</textarea>
+</div>
+<p>Можем да стигнем и до решение, като постепенно изчисляваме логически стойности, използвайки логически променливи:</p>
+
+<div data-childcomponent="console__branching_working_hours2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__branching_working_hours2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+h = int(input())
+at_morning_office_hours  = 7 <= h and h < 11
+at_evening_office_hours = 17 <= h and h < 22
+at_office_hours = at_morning_office_hours or at_evening_office_hours
+if at_office_hours:
+    print("Peter came across during office hours.")
+else:
+    print("Peter came across out of business hours.")
+</textarea>
+</div>
+<p>В това решение само h е целочислена променлива и всички останали (at_morning_office_hours, at_evening_office_hours, at_office_hours) са логични, което означава, че те ще получат стойности True или False при изпълнение на програмата.</p>
+</div>
+<div class="section" id="id4">
+<h3>Логически изрази - въпроси<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="console__branching_quiz_compare">
+    <span data-component="question">Q-24: Съпоставете еквивалентните изрази</span>
+	<span data-component=feedback>Try again!</span>
+
+    <li data-component="draggable" id="console__branching_quiz_compare_drag1">a <= b </li>
+    <li data-component="dropzone" for="console__branching_quiz_compare_drag1"> a < b or a == b</li>
+
+    <li data-component="draggable" id="console__branching_quiz_compare_drag2">a >= b </li>
+    <li data-component="dropzone" for="console__branching_quiz_compare_drag2"> b <= a</li>
+
+    <li data-component="draggable" id="console__branching_quiz_compare_drag3">not (a == b) </li>
+    <li data-component="dropzone" for="console__branching_quiz_compare_drag3"> a < b or a > b</li>
+
+    <li data-component="draggable" id="console__branching_quiz_compare_drag4">not (a != b) </li>
+    <li data-component="dropzone" for="console__branching_quiz_compare_drag4"> a == b</li>
+</ul></div>
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="console__branching_quiz_interval">
+            <p>Q-25: Какви са всички условия, равни на <strong>not (7 &lt;= h and h &lt;11)</strong>?</p>
+
+            <li data-component="answer"  id="console__branching_quiz_interval_opt_a">h < 7 and 11 <= h</li><li data-component="feedback" id="console__branching_quiz_interval_opt_a">No, this condition is not fulfilled for any h.</li>
+            
+            <li data-component="answer" data-correct id="console__branching_quiz_interval_opt_b">h < 7 or 11 <= h</li><li data-component="feedback" id="console__branching_quiz_interval_opt_b">Correct.</li>
+            
+            <li data-component="answer" data-correct id="console__branching_quiz_interval_opt_c">not(7 <= h) or not(h < 11)</li><li data-component="feedback" id="console__branching_quiz_interval_opt_c">Correct.</li>
+            
+            <li data-component="answer"  id="console__branching_quiz_interval_opt_d">h <= 7 or 11 < h</li><li data-component="feedback" id="console__branching_quiz_interval_opt_d">No, the value of the conditions differs if h is exactly 7 or 11.</li>
+            
+
+            </ul>
+            </div>
+            
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="console__branching_quiz_abc_sign">
+    <span data-component="question">Q-26: Свържете условията с описанията</span>
+	<span data-component=feedback>Try again!</span>
+
+    <li data-component="draggable" id="console__branching_quiz_abc_sign_drag1">At least one of a, b, c is positive </li>
+    <li data-component="dropzone" for="console__branching_quiz_abc_sign_drag1"> a > 0 or b > 0 or c > 0</li>
+
+    <li data-component="draggable" id="console__branching_quiz_abc_sign_drag2">None of a, b, c is positive </li>
+    <li data-component="dropzone" for="console__branching_quiz_abc_sign_drag2"> a <= 0 and b <= 0 and c <= 0</li>
+
+    <li data-component="draggable" id="console__branching_quiz_abc_sign_drag3">a, b and c are not all positive </li>
+    <li data-component="dropzone" for="console__branching_quiz_abc_sign_drag3"> a <= 0 or b <= 0 or c <= 0</li>
+
+    <li data-component="draggable" id="console__branching_quiz_abc_sign_drag4">a, b and c are all positive </li>
+    <li data-component="dropzone" for="console__branching_quiz_abc_sign_drag4"> a > 0 and b > 0 and c > 0</li>
+</ul></div>
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="console__branching_quiz_sport_center">
+            <p>Q-27: Правителството на държавата предлага помощ за изграждането на спортен център. Селища с до 10 000 жители имат право да кандидатстват, както и селища с над 10 000 жители и среден доход до 2000 г. Кое от условията правилно проверява дали дадено населено място може да се прилага?</p>
+
+            <li data-component="answer" data-correct id="console__branching_quiz_sport_center_opt_a">(population <= 10000) or (population > 10000 and income <= 2000)</li><li data-component="feedback" id="console__branching_quiz_sport_center_opt_a">Correct.</li>
+            
+            <li data-component="answer" data-correct id="console__branching_quiz_sport_center_opt_b">population <= 10000 or income <= 2000</li><li data-component="feedback" id="console__branching_quiz_sport_center_opt_b">Correct.</li>
+            
+            <li data-component="answer"  id="console__branching_quiz_sport_center_opt_c">population <= 10000 and income <= 2000</li><li data-component="feedback" id="console__branching_quiz_sport_center_opt_c">Wrong.</li>
+            
+            <li data-component="answer" data-correct id="console__branching_quiz_sport_center_opt_d">(income <= 2000) or (income > 2000 and population <= 10000)</li><li data-component="feedback" id="console__branching_quiz_sport_center_opt_d">Correct.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id5">
+<h3>Логически изрази - задачи<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача – подредени числа:</strong></p>
+<p>Напишете програма, която приема цели числа  <em>a</em>, <em>b</em>, <em>c</em> и отговаря на въпроса дали тези числа са дадени в ред от най-малки до най-големи.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__branching_increasing3" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__branching_increasing3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = int(input("a = "))
+b = int(input("b = "))
+c = int(input("c = "))
+# finish the program
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - среден номер:</strong></p>
+<p>Напишете програма, която приема цели числа <em>a</em>, <em>b</em>, <em>c</em> и отговаря на въпроса дали <em>b</em> е среден по размер.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__branching_middlenum" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__branching_middlenum data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = int(input("a = "))
+b = int(input("b = "))
+c = int(input("c = "))
+# finish the program
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - гледане на кучето:</strong></p>
+<p>Анна и Марк живеят заедно и имат куче на име Боби. Двете трябва да пътуват същия месец, Анна от ден  <em>a1</em> до <em>a2</em>, и Марк от ден  <em>m1</em> до <em>m2</em>. И двамата тръгват сутринта и се връщат вечерта. Тъй като не искат да оставят Боби сам, те се чудят дали пътуванията им се припокриват.</p>
+<p>Напишете програма, която приема цели числа <em>a1</em>, <em>a2</em>, <em>m1</em> и <em>m2</em>, и ще отговори на въпроса дали пътуванията на Ана и Марк се припокриват.</p>
+
+    </p></div></div>
+<p><strong>Съвет:</strong> пътуванията се припокриват, ако Марк замине преди Ана да се върне (денят на заминаването на Марк е по-малък или равен на деня на връщането на Ана) или обратно - ако Ана напусне преди Марк да се върне.</p>
+
+<div data-childcomponent="console__branching_intervals" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__branching_intervals data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a1 = int(input("a1 = "))
+a2 = int(input("a2 = "))
+m1 = int(input("m1 = "))
+m2 = int(input("m2 = "))
+# finish the program
+</textarea>
+</div>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Математически функции - упражнения' data-toggle="tooltip"><a href="02_Console_07_number_functions_practice.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Сложно разклоняване' data-toggle="tooltip"><a href="02_Console_09_elif.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Математически функции - упражнения' data-toggle="tooltip"><a href="02_Console_07_number_functions_practice.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Сложно разклоняване' data-toggle="tooltip"><a href="02_Console_09_elif.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

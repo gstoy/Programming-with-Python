@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Събиране на данни &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Преброяване и сумиране" href="02_Console_12_algo_count_accumulate.html" />
+    <link rel="prev" title="Скриптове и for цикли" href="02_Console_10_scripting.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Събиране на данни<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>В предишния урок използвахме комплект, за да изпълняваме някои команди (изчисляване и печат) над всяка стойност от комплекта, използвайки for цикъл.</p>
+<p>Комплектите също са тип данни в Python, като числа, низове или логически стойности. Типовете int (integer), float (реално число), str (string) и bool (логическа стойност) са основни типове. Разликата между комплектите и основните типове е, че стойността на комплект се състои от множество стойности от по-опростен тип.</p>
+<p>Всяка стойност, която се състои от множество стойности от по-опростен тип, ще се нарича колекция. Данните, от които се събира колекцията, се наричат елементи за събиране.</p>
+<p>Можем да кажем, че комплектът е вид колекция и това е първият вид колекция, който срещаме.</p>
+<div class="section" id="tuple">
+<h2>Комплект (Tuple) и неговите елементи<a class="headerlink" href="#tuple" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Опаковане и разопаковане на комплектите<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Можем да поставим целия комплект в променлива, както правим със стойности от по-прост тип. В следващия пример, променливата на температурата съдържа целия комплект като неговата стойност.</p>
+
+<div data-childcomponent="console__collections_tuple1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_tuple1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+temperatures = (25, 24, 25, 23, 25, 25)
+for t in temperatures:
+    print(t)
+</textarea>
+</div>
+<p>Този вид присвояване на стойност (както в първия ред на програмата) е известен като пакетиране на комплект. Възможно е и обратното присвояване: когато знаем колко елемента има в комплект, можем да присвоим елементите на комплекта на съответния брой променливи:</p>
+
+<div data-childcomponent="console__collections_tuple2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_tuple2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+full_name = ("Arthur", "Conan", "Doyle")
+first_name, middle_name, last_name = full_name
+print(first_name)
+print(middle_name)
+print(last_name)
+</textarea>
+</div>
+<p>Твърдения като <code class="docutils literal notranslate"><span class="pre">first_name,</span> <span class="pre">middle_name,</span> <span class="pre">last_name</span> <span class="pre">=</span> <span class="pre">full</span> <span class="pre">name</span></code> се наричат отваряне на комплекта</p>
+<p>Същият ефект се постига чрез свързано твърдение</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span><span class="p">,</span> <span class="n">middle_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="s2">&quot;Arthur&quot;</span><span class="p">,</span> <span class="s2">&quot;Conan&quot;</span><span class="p">,</span> <span class="s2">&quot;Doyle&quot;</span>
+</pre></div>
+</div>
+<p>Комплектите не се появяват в това изявление, което се нарича присвояване на множество стойности.</p>
+</div>
+<div class="section" id="id3">
+<h3>Елементи и индекси<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Можем да получим и елементите на комплект, като напишем името на комплекта, а зад него в квадратни скоби поредният номер на елемента, който искаме. Тук трябва да се отбележи, че преброяването на елементите на всяка колекция започва от нула. Например:</p>
+
+<div data-childcomponent="console__collections_index" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_index data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+basic_colors = ("Red", "Green", "Blue")
+print(basic_colors[0])
+print(basic_colors[1])
+print(basic_colors[2])
+</textarea>
+</div>
+<p>Поредният номер на елемент се нарича също <em>индекс</em> на елемента. ако комплектът има <em>n</em> елемента, можем да използваме числата 0, 1, 2, … n-1 като индекси. В горния пример n = 3, така че са разрешени индекси 0, 1 и 2. Опитът да използвате индекс извън тези граници причинява грешка (опитайте).</p>
+</div>
+<div class="section" id="id4">
+<h3>Дължина на комплектите<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Броят на елементите на комплека може да се получи с помощта на функцията <em>len</em>.</p>
+
+<div data-childcomponent="console__collections_len1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_len1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+basic_colors = ("Red", "Green", "Blue")
+n = len(basic_colors)
+print(n)
+</textarea>
+</div>
+<p>или по-кратко:</p>
+
+<div data-childcomponent="console__collections_len2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_len2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+print(len(("Red", "Green", "Blue")))
+</textarea>
+</div>
+<p>Обърнете внимание на двойните скоби (едната за функция, а другата за комплект).</p>
+<p>Чрез тези примери видяхме, че комплектните елементи могат да бъдат числа или низове. Всъщност елементите на комплекта могат да бъдат от всякакъв тип, основни или сложни.</p>
+<p>Например, възможно е да се създаде пакет от комплекти:</p>
+
+<div data-childcomponent="console__collections_len3" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_len3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+t = ((11, 12, 13), (21, 22, 23))
+print(len(t))
+</textarea>
+</div>
+<p>Комплекта t съдържа два по-прости комплекта, следователно броят на неговите елементи е 2.</p>
+<p>В Python елементите на един комплект могат да бъдат от различни типове и такива примери ще видим последни.</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Обхват<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Обхватът е друг вид колекция. За разлика от комплекта, елементите тук винаги са цели числа.</p>
+<p>Обхватът може да бъде определен по няколко начина.</p>
+<div class="section" id="id6">
+<h3>Обхват с един аргумент<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Най-простата форма за определяне на диапазон е  <em>range(n)</em>, където <em>n</em> е положително цяло число. Диапазонът <em>range(n)</em> съдържа цели числа от 0 до n, без да включва n. Например, range(5) съдържа стойности 0, 1, 2, 3, 4.</p>
+
+<div data-childcomponent="console__collections_range_n_i" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_range_n_i data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+for i in range(5):
+    print(i)
+</textarea>
+</div>
+<p>Виждаме, че в оператора <em>for</em> можем да използваме диапазона по същия начин като комплекта. Всъщност, всяка колекция може да бъде на мястото на комплекта или гамата.</p>
+<p>Тъй като range(n) съдържа общо n стойности, този диапазон често се използва, когато командата трябва да се повтаря n пъти по същия начин:</p>
+
+<div data-childcomponent="console__collections_range_n" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_range_n data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+for i in range(5):
+    print("Hello!")
+</textarea>
+</div>
+<p>Функцията за печат беше изпълнена за всяка стойност i от последователност 0, 1, 2, 3, 4, но в този пример тези стойности не се използват в тялото на цикъла. Така постигнахме, че функцията за печат се изпълнява 5 пъти по абсолютно същия начин, тоест тя се повтаря 5 пъти.</p>
+<p>Друго често срещано използване на този тип гама е да преминете през всички елементи на комплект. В такъв случай променливата на цикъла служи като индекс. Този начин на преминаване през стойностите на комплекта е подходящ, когато освен тези стойности на комплекта в цикъла имаме нужда и от техните последователни номера (този начин на преминаване през колекцията е по-често срещан в други езици за програмиране от Python).</p>
+
+<div data-childcomponent="console__collections_for_range_len" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_for_range_len data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+colors = ["Red", "Green", "Blue", "Yellow", "Magenta"]
+n = len(colors)
+for i in range(n):
+    print('Color #', i, 'is', colors[i])
+</textarea>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>Обхват с два аргумента<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>Когато се нуждаем от последователност от последователни цели числа, които не започват от нула, задаваме диапазона като range(a, b), където a и b са цели числа, така че a &lt;b. Тогава последователността е съставена от цели числа от a до b, без да се включва b. Например диапазонът на range(1, b) дава последователността от числа 1, 2, 3, 4, 5:</p>
+
+<div data-childcomponent="console__collections_range_a_b" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_range_a_b data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+for i in range(1, 6):
+    print(i)
+</textarea>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>Обхват с три аргумента<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Третата форма за определяне на диапазон има три аргумента:</p>
+
+<div data-childcomponent="console__collections_range_a_b_c" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_range_a_b_c data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+for i in range(2, 12, 2):
+    print(i)
+</textarea>
+</div>
+<p>Стойностите на диапазона, дадени от диапазон (a, b, c), включва от a до b (без да се включва b) със стъпка c, т.е. стойностите се променят с c. Стъпка c също може да бъде отрицателна:</p>
+
+<div data-childcomponent="console__collections_range_a_b_cneg" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_range_a_b_cneg data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+for i in range(12, 2, -2):
+    print(i)
+</textarea>
+</div>
+<p>Можем да преобразуваме диапазон в комплект (обратното не е възможно, нито някога е необходимо):</p>
+
+<div data-childcomponent="console__collections_range_to_tuple" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_range_to_tuple data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = tuple(range(2, 12, 2))
+print(len(a))
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="strings">
+<h2>Низовете(strings) като колекция<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+<p>Досега сме използвали низове като основен тип, но низовете могат да се използват и като колекции от отделни знаци. Можем да преместваме низови символи с помощта на цикъл и да извличаме отделни символи, използвайки индекси:</p>
+
+<div data-childcomponent="console__collections_str_as_collection" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_str_as_collection data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+s = 'text'
+print(s[1], s[2])
+for c in s:
+    print(c)
+</textarea>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>Функции на колекциите<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>В Python има много функции, които приемат колекция като аргумент. Една от тях е функцията len, която вече срещнахме. Някои други често използвани функции, които се прилагат за колекциите, са:</p>
+<ul class="simple">
+<li><p><em>min</em>, функция, която дава най-малкия елемент от колекция</p></li>
+<li><p><em>max</em>, функция, която дава най-големия елемент от колекция</p></li>
+<li><p><em>sum</em>, функция, която дава сумата от елементите на колекция</p></li>
+</ul>
+
+<div data-childcomponent="console__collections_aggregation" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_aggregation data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+print('Tuple:')
+t = (2, 8, 4, 15, 3)
+print('len(t) =', len(t))
+print('min(t) =', min(t))
+print('max(t) =', max(t))
+print('sum(t) =', sum(t))
+
+print('Range:')
+r = range(1, 10, 2)
+print('len(r) =', len(r))
+print('min(r) =', min(r))
+print('max(r) =', max(r))
+print('sum(r) =', sum(r))
+
+print('String:')
+s = 'Python'
+print('len(s) =', len(s))
+print('min(s) =', min(s))
+print('max(s) =', max(s))
+# elements of s are not numbers, so uncommenting the next statement would cause an error
+# print('sum(s) =', sum(s))
+</textarea>
+</div>
+<p>Стойностите на функциите len, sum, min, max за диапазона също могат да бъдат определени от параметрите на диапазона, но тук искахме да отбележим, че всички тези функции приемат различни колекции като свой аргумент (включително диапазон).</p>
+<div class="section" id="id10">
+<h3>Въпроси<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="console__collections_quiz_tuple_unpack">
+            <p>Q-28: Какво отпечатва следната програма?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">t</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="console__collections_quiz_tuple_unpack_opt_a">a program error occurs</li><li data-component="feedback" id="console__collections_quiz_tuple_unpack_opt_a">Try again</li>
+            
+            <li data-component="answer"  id="console__collections_quiz_tuple_unpack_opt_b">2</li><li data-component="feedback" id="console__collections_quiz_tuple_unpack_opt_b">Try again</li>
+            
+            <li data-component="answer" data-correct id="console__collections_quiz_tuple_unpack_opt_c">20</li><li data-component="feedback" id="console__collections_quiz_tuple_unpack_opt_c">Correct</li>
+            
+            <li data-component="answer"  id="console__collections_quiz_tuple_unpack_opt_d">3</li><li data-component="feedback" id="console__collections_quiz_tuple_unpack_opt_d">Try again</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="console__collections_quiz_tuple_index">
+            <p>Q-29: Какво отпечатва следната програма?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="console__collections_quiz_tuple_index_opt_a">1</li><li data-component="feedback" id="console__collections_quiz_tuple_index_opt_a">Try again</li>
+            
+            <li data-component="answer" data-correct id="console__collections_quiz_tuple_index_opt_b">2</li><li data-component="feedback" id="console__collections_quiz_tuple_index_opt_b">Correct</li>
+            
+            <li data-component="answer"  id="console__collections_quiz_tuple_index_opt_c">a program error occurs</li><li data-component="feedback" id="console__collections_quiz_tuple_index_opt_c">Try again</li>
+            
+            <li data-component="answer"  id="console__collections_quiz_tuple_index_opt_d">3</li><li data-component="feedback" id="console__collections_quiz_tuple_index_opt_d">Try again</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="console__collections_quiz_range1">
+            <p>Q-30: Кой диапазон съдържа само стойности 1, 2, 3?</p>
+
+            <li data-component="answer"  id="console__collections_quiz_range1_opt_a">range(4)</li><li data-component="feedback" id="console__collections_quiz_range1_opt_a">Try again</li>
+            
+            <li data-component="answer" data-correct id="console__collections_quiz_range1_opt_b">range(1, 4)</li><li data-component="feedback" id="console__collections_quiz_range1_opt_b">Correct</li>
+            
+            <li data-component="answer"  id="console__collections_quiz_range1_opt_c">range(3)</li><li data-component="feedback" id="console__collections_quiz_range1_opt_c">Try again</li>
+            
+            <li data-component="answer"  id="console__collections_quiz_range1_opt_d">range(1, 3)</li><li data-component="feedback" id="console__collections_quiz_range1_opt_d">Try again</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="console__collections_quiz_range2">
+            <p>Q-31: Колко стойности съдържа диапазонът (1, 10, 2)?</p>
+
+            <li data-component="answer" data-correct id="console__collections_quiz_range2_opt_a">5</li><li data-component="feedback" id="console__collections_quiz_range2_opt_a">Correct</li>
+            
+            <li data-component="answer"  id="console__collections_quiz_range2_opt_b">6</li><li data-component="feedback" id="console__collections_quiz_range2_opt_b">Try again</li>
+            
+            <li data-component="answer"  id="console__collections_quiz_range2_opt_c">9</li><li data-component="feedback" id="console__collections_quiz_range2_opt_c">Try again</li>
+            
+            <li data-component="answer"  id="console__collections_quiz_range2_opt_d">10</li><li data-component="feedback" id="console__collections_quiz_range2_opt_d">Try again</li>
+            
+
+            </ul>
+            </div>
+            
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="console__collections_quiz_range_len">
+    <span data-component="question">Q-32: Свържете обхватите с броя елементи</span>
+	<span data-component=feedback>Try again!</span>
+
+    <li data-component="draggable" id="console__collections_quiz_range_len_drag1">5</li>
+    <li data-component="dropzone" for="console__collections_quiz_range_len_drag1">range(5)</li>
+
+    <li data-component="draggable" id="console__collections_quiz_range_len_drag2">0</li>
+    <li data-component="dropzone" for="console__collections_quiz_range_len_drag2">range(3, 3)</li>
+
+    <li data-component="draggable" id="console__collections_quiz_range_len_drag3">3</li>
+    <li data-component="dropzone" for="console__collections_quiz_range_len_drag3">range(1, 4)</li>
+
+    <li data-component="draggable" id="console__collections_quiz_range_len_drag4">1</li>
+    <li data-component="dropzone" for="console__collections_quiz_range_len_drag4">range(3, 6, 3)</li>
+</ul></div>
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="console__collections_quiz_range_values">
+    <span data-component="question">Q-33: Свържете обхватите със стойностите</span>
+	<span data-component=feedback>Try again!</span>
+
+    <li data-component="draggable" id="console__collections_quiz_range_values_drag1">3, 4, 5</li>
+    <li data-component="dropzone" for="console__collections_quiz_range_values_drag1">range(3, 6)</li>
+
+    <li data-component="draggable" id="console__collections_quiz_range_values_drag2">0, 1, 2</li>
+    <li data-component="dropzone" for="console__collections_quiz_range_values_drag2">range(3)</li>
+
+    <li data-component="draggable" id="console__collections_quiz_range_values_drag3">3, 1</li>
+    <li data-component="dropzone" for="console__collections_quiz_range_values_drag3">range(3, -1, -2)</li>
+
+    <li data-component="draggable" id="console__collections_quiz_range_values_drag4">3, 2, 1, 0, -1</li>
+    <li data-component="dropzone" for="console__collections_quiz_range_values_drag4">range(3, -2, -1)</li>
+
+    <li data-component="draggable" id="console__collections_quiz_range_values_drag5">3</li>
+    <li data-component="dropzone" for="console__collections_quiz_range_values_drag5">range(3, 6, 3)</li>
+</ul></div></div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Скриптове и <em>for</em> цикли' data-toggle="tooltip"><a href="02_Console_10_scripting.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Преброяване и сумиране' data-toggle="tooltip"><a href="02_Console_12_algo_count_accumulate.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Скриптове и <em>for</em> цикли' data-toggle="tooltip"><a href="02_Console_10_scripting.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Преброяване и сумиране' data-toggle="tooltip"><a href="02_Console_12_algo_count_accumulate.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

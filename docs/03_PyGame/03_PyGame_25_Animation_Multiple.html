@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Преместване на множество обекти &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Взаимодействие" href="03_PyGame_30_Interaction.html" />
+    <link rel="prev" title="Рисуване на текст" href="03_PyGame_24_Animation_Text.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Преместване на множество обекти<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Досега правихме анимации, в които се движеха различни обекти (кола, билярдна топка, самолет, текст), но във всяка от тези програми имаше само един движещ се обект. За глобалните променливи, които описват сцената, използвахме координатите на този движещ се обект, а понякога използвахме и други стойности, като изместване, посока на движение и т.н.</p>
+<p>Движението на множество обекти не е съществено различно от движението на един обект - просто ще трябва да проследим стойности, които описват движението за всички обекти. Например, можем да представим всеки обект с набор от стойности, описващи го, и да запазим всички такива комплекти в списък.</p>
+<div class="section" id="id2">
+<h2>Топки<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>В следващия пример ще видим анимирано движение на няколко топки. Всяка топка е представена с <span class="math notranslate nohighlight">\((x, y, dx, dy, r, color)\)</span> комплект, където <span class="math notranslate nohighlight">\(x, y\)</span> са координатите на центъра на топката, <span class="math notranslate nohighlight">\(dx , dy\)</span> са разместванията на топката по координата, <span class="math notranslate nohighlight">\(r\)</span> е радиусът, а <span class="math notranslate nohighlight">\(color\)</span> е цветът на топката. Всички такива комплекти се поставят в списъка <em>топки</em>.</p>
+<p>При разопаковане на комплект от елемент от списъка (команда <code class="docutils literal notranslate"><span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">dx,</span> <span class="pre">dy,</span> <span class="pre">r,</span> <span class="pre">color=balls[i]</span></code>), както и при връщането му в списъка (команда <code class="docutils literal notranslate"><span class="pre">balls[i]=(x,</span> <span class="pre">y,</span> <span class="pre">dx,</span> <span class="pre">dy,</span> <span class="pre">r,</span> <span class="pre">color)</span></code>), трябва да имаме предвид реда на променливите.</p>
+<p>В примера използваме модула <code class="docutils literal notranslate"><span class="pre">random</span></code>, за да създадем топките, за да получим произволни селекции (внесени с помощта на командата <em>import</em>). Функцията <code class="docutils literal notranslate"><span class="pre">random.randint(a,b)</span></code> връща произволно цяло число между <em>a</em> и <em>b</em> (включително граници), а функцията <code class="docutils literal notranslate"><span class="pre">random.choice</span> <span class="pre">(a)</span></code> връща произволен елемент от колекция <em>a</em>.</p>
+
+<div data-childcomponent="PyGame__anim_balls_bouncing" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_balls_bouncing data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="import random, pygame as pg, pygamebg
+(width, height) = (500, 300)
+canvas = pygamebg.open_window(width, height, &quot;Balls&quot;)
+
+colors = (
+    pg.Color(&quot;red&quot;), pg.Color(&quot;yellow&quot;), pg.Color(&quot;blue&quot;),
+    pg.Color(&quot;cyan&quot;), pg.Color(&quot;green&quot;), pg.Color(&quot;purple&quot;)
+)
+
+# Make a list of 10 ball. The ball is determined by 
+# position (x, y), displacement (dx, dy), size (r) and color.
+balls = []
+for _ in range(10):
+    r = random.randint(10, 30)
+    x = random.randint(r, width - r)
+    y = random.randint(r, height - r)
+    color = random.choice(colors)
+    dx, dy = 0, 0
+    while dx == 0 and dy == 0: # we don&apos;t want the balls that stand still
+        dx = random.randint(-8, 8)
+        dy = random.randint(-8, 8)
+    balls.append((x, y, dx, dy, r, color))
+    
+def new_frame():
+    global balls
+    for i in range(10):
+        x, y, dx, dy, r, color = balls[i]
+        (x, y) = (x + dx, y + dy)
+        if x - r &lt; 0 or x + r &gt; width: 
+            dx = -dx
+        if y - r &lt; 0 or y + r &gt; height: 
+            dy = -dy
+        balls[i] = (x, y, dx, dy, r, color)
+        
+    canvas.fill(pg.Color(&quot;darkgray&quot;))
+    for x, y, dx, dy, r, color in balls:
+        pg.draw.circle(canvas, color, (x, y), r)
+
+pygamebg.frame_loop(50, new_frame)
+"   >
+
+
+</textarea>
+</div>
+<p>Ако сравним тази програма с анимацията на движението на билярдна топка, ще забележим голямо сходство. Функцията <em>new_frame</em> е по същество различна само по това, че сега всички действия (преместване, подскачане, рисуване) се извършват в цикъл, тъй като те трябва да се извършват за всяка топка. Задаването на първоначалното състояние също е малко по-сложно, тъй като има повече обекти и ние съхраняваме множество данни за всеки от тях, а също така използваме произволни избори.</p>
+<hr class="docutils" />
+<p>В предишния пример всички обекти (топки) присъстват от началото до края на програмата. Има ситуации, когато искаме някои обекти да престанат да съществуват по време на изпълнение на програмата или да се появят някои нови обекти (или и двете). В такива случаи можем да използваме спомагателен списък във функцията <em>new_frame</em>, в който ще поставим стойности, които описват новото състояние. Типична последователност от дейности е следната:</p>
+<ul class="simple">
+<li><p>създайте нов празен списък при започване на функцията <em>new_frame</em></p></li>
+<li><p>преминаваме през списъка на съществуващите комплекти, променяме ги и добавяме тези, които все още ни трябват, в новия списък</p></li>
+<li><p>ако е необходимо, допълнете списъка с нови комплекти</p></li>
+<li><p>накрая, ние актуализираме глобалния списък, като добавяме стойности от новия, спомагателен списък</p></li>
+</ul>
+<p>Нека да разгледаме един пример.</p>
+</div>
+<div class="section" id="id3">
+<h2>Звезеди<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>В този пример симулираме движението през пространството. Звездите, които срещаме, са представени с бели кръгове и се определят от тяхното положение и радиус.</p>
+<p>За всеки кадър изчисляваме нов спомагателен списък, който описва следващото състояние. Преместваме звездите, следвайки някакво правило, и копираме тези, които не са напуснали напълно прозореца, в следващия списък със състояния. След обработката на съществуващите звезди, ние добавяме нови звезди към следващия списък със състояния, така че общият брой звезди да не намалява. Накрая преместваме всички звезди в глобалния списък, за да можем да изчислим следващия кадър по-късно.</p>
+
+<div data-childcomponent="PyGame__anim_trough_stars" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_trough_stars data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="import random, pygame as pg, pygamebg
+(width, height) = (500, 300)
+canvas = pygamebg.open_window(width, height, &quot;Stars&quot;)
+cx, cy = width // 2, height // 2
+
+# A star is determined by its position (x, y) and size (r).
+def new_star():
+    r = random.randint(1, 3)
+    x = random.randint(r, width - r)
+    y = random.randint(r, height - r)
+    return (x, y, r)
+
+# Create a list of stars.
+num_stars = 40
+stars = []
+for _ in range(num_stars):
+    stars.append(new_star())
+    
+def new_frame():
+    global stars
+    next_stars = [] # list that will contain the next state
+    for x, y, r in stars:
+        x += 0.01 * (x-cx) # x moves away from the center of the window
+        y += 0.01 * (y-cy) # y moves away from the center of the window
+        r *= 1.01          # we see the star as bigger because we are &quot;approaching&quot;
+        # if at least part of the star is in the window, we&apos;ll keep it
+        if (x+r &gt; 0 and x-r &lt; width and y+r &gt; 0 and y-r &lt; height):
+            next_stars.append((x, y, r))
+            
+    while len(next_stars) &lt; num_stars:
+        next_stars.append(new_star())
+
+    stars = next_stars
+    canvas.fill(pg.Color(&quot;black&quot;))
+    for x, y, r in stars:
+        ix, iy, ir = int(x), int(y), int(r)
+        pg.draw.circle(canvas, pg.Color(&apos;white&apos;), (ix, iy), ir)
+
+pygamebg.frame_loop(60, new_frame)
+"   >
+
+
+</textarea>
+</div>
+<p>Този пример е даден предимно за въвеждане на различен начин на работа със списък на комплекти, които описват сцена. Поради това на заден план бяха оставени някои интересни подробности. Нека разгледаме малко тези, в този контекст, странични детайли. За да постигнете ефект от приближаването, звездите пред нас трябва да се раздалечават и да се увеличават. Следователно в програмата стойностите на <em>x</em> и <em>y</em> се променят, така че звездите да се движат от центъра на прозореца към краищата, като се движат по-бързо, тъй като отиват по-далеч от центъра.</p>
+<p>Не е особено важно да разбирате напълно командите, които променят стойностите на <em>x</em>, <em>y</em> и <em>r</em>, за да научите програмирането, но можете да изпробвате как се променя анимацията, когато леко промените коефициентите в тези команди (например звездите могат да се движат по-бавно или да растат по-бързо).</p>
+</div>
+<div class="section" id="id4">
+<h2>Задачи<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Снежинки:</strong> Завършете програмата така, че да работи, както е показано в примера.</p>
+<p>Всяка снежинка е описана само с две числа, нейните координати, така че комплектите, които ще използваме, всъщност ще бъдат двойки <span class="math notranslate nohighlight">\((x, y)\)</span>.</p>
+<p>Снежинките падат по с 1 пиксел, а тези, които излизат през прозореца, се заменят с нови снежинки. Формирането на ново състояние е подобно на това на програмата “звезди”, само правилата за преместване на снежинки са по-прости.</p>
+<p>Снежинките в първоначалния набор са избрани навсякъде в прозореца, а добавените по-късно се избират някъде в горния ръб на прозореца.</p>
+
+    </p></div></div>
+<a class="reference internal image-reference" href="../_images/snowflake.png"><img alt="../_images/snowflake.png" src="../_images/snowflake.png" style="width: 50px;" /></a>
+
+<div data-childcomponent="PyGame__anim_snowflakes" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_snowflakes data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="import random, pygame as pg, pygamebg
+(width, height) = (800, 400)
+canvas = pygamebg.open_window(width, height, &quot;Snowflakes&quot;)
+
+snowflake_image = pg.image.load(&quot;snowflake.png&quot;)  # a snowflake image
+snowflake_height = snowflake_image.get_height()
+num_flakes = 10 # total number of the snowflakes
+
+# randomly generate snowflake positions
+snowflakes = []
+for i in range(num_flakes):
+    x, y = random.randint(0, width), random.randint(0, height)
+    snowflakes.append((x, y))
+
+def new_frame():
+    global snowflakes
+
+    # move the flakes that have not fallen yet and put them into a new list
+    new_flakes = []
+    for x, y in snowflakes:
+        if y + snowflake_height &lt; height:
+            new_flakes.append((x, y+1))
+            
+    # append the list with new snowflakes, 
+    # which are starting to fall from the top of the window
+    while len(new_flakes) &lt; num_flakes:
+        x, y = random.randint(0, width), random.randint(-snowflake_height, 0)
+        new_flakes.append((x, y))
+        
+    snowflakes = new_flakes
+    canvas.fill(pg.Color(&quot;white&quot;))    # paint background
+    for (x, y) in snowflakes:         # draw all the snowflakes
+        canvas.blit(snowflake_image, (x, y))
+
+pygamebg.frame_loop(50, new_frame)
+"  >
+import random, pygame as pg, pygamebg
+(width, height) = (800, 400)
+canvas = pygamebg.open_window(width, height, "Snowflakes")
+
+snowflake_image = pg.image.load("snowflake.png")  # a snowflake image
+snowflake_height = snowflake_image.get_height()
+num_flakes = 10 # total number of the snowflakes
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Изходящи топки:</strong> Копирайте първата програма (топки) тук и я модифицирайте така, че топките да не отскачат, а да продължат да се отдалечават, а тези, които тръгват, се заменят с нови. Тази програма е комбинация от двата дадени примера (топки и звезди), така че опитайте да използвате части от двете програми.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="PyGame__anim_balls_passing" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_balls_passing data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="import random, pygame as pg, pygamebg
+(width, height) = (500, 300)
+canvas = pygamebg.open_window(width, height, &quot;Balls&quot;)
+
+colors = (
+    pg.Color(&quot;red&quot;), pg.Color(&quot;yellow&quot;), pg.Color(&quot;blue&quot;),
+    pg.Color(&quot;cyan&quot;), pg.Color(&quot;green&quot;), pg.Color(&quot;purple&quot;)
+)
+ 
+# The ball is determined by position (x, y), displacement (dx, dy), size (r) and color.
+def new_ball():
+    r = random.randint(10, 30)
+    x = random.randint(r, width - r)
+    y = random.randint(r, height - r)
+    color = random.choice(colors)
+    dx, dy = 0, 0
+    while dx == 0 and dy == 0: # we don&apos;t want the balls that stand still
+        dx = random.randint(-8, 8)
+        dy = random.randint(-8, 8)
+    return (x, y, dx, dy, r, color)
+
+
+# make a list of 10 balls
+balls = []
+for _ in range(10):
+    balls.append(new_ball())
+    
+def new_frame():
+    global balls
+    next_balls = [] # list that will contain the next position of each ball
+    for x, y, dx, dy, r, color in balls:
+        (x, y) = (x + dx, y + dy)
+        if (x+r &lt; 0 or x-r &gt; width or y+r &lt; 0 or y-r &gt; height):
+            x, y, dx, dy, r, color = new_ball()
+            
+        next_balls.append((x, y, dx, dy, r, color))
+        
+    balls = next_balls
+    canvas.fill(pg.Color(&quot;darkgray&quot;))
+    for x, y, dx, dy, r, color in balls:
+        pg.draw.circle(canvas, color, (x, y), r)
+
+pygamebg.frame_loop(50, new_frame)
+"  >
+
+
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Плъзгащ се текст</strong> Изпробвайте програмата и се опитайте да разберете как работи. Опитайте да промените нещо в програмата (текстът, който се показва, цветът, в който се показва текстът, скоростта, с която се движи текстът, или всяка друга подробност).</p>
+<p>Предизвикателство: Опитайте се да промените програмата, така че текстът да се плъзга надолу, вместо нагоре.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="PyGame__anim_gliding_text" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_gliding_text data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="import pygame as pg, pygamebg
+
+(width, height) = (700, 250)
+canvas = pygamebg.open_window(width, height, &quot;Story&quot;)
+text = (
+    &quot;Young children learn to walk&quot;,
+    &quot;by starting to walk.&quot;,
+    &quot;At first, they often fall,&quot;,
+    &quot;but they get up and keep going&quot;,
+    &quot;and with time&quot;,
+    &quot;they&apos;re getting better.&quot;,
+    &quot;Why not learn&quot;,
+    &quot;all the other skills&quot;,
+    &quot; that way?&quot;,
+    &quot; &quot;
+)
+
+font = pg.font.SysFont(&quot;Arial&quot;, 40) # font for displaying the text
+MARGIN_UP_DOWN = 30
+TEXT_HEIGHT = 50
+y_text_start = 200
+i_first_visible_text_line = 0
+num_visible_text_lines = 1
+
+def draw():
+    canvas.fill(pg.Color(&quot;skyblue&quot;)) # paint the background
+    
+    i_line = i_first_visible_text_line
+    y = y_text_start
+    for _ in range(num_visible_text_lines):
+        # build an image of a text line and display it
+        gray = min(230 - y, 192)
+        color = (gray, gray, gray)
+        text_image = font.render(text[i_line], True, color)
+        canvas.blit(text_image, (20, y)) 
+        i_line = (i_line + 1) % len(text)
+        y += TEXT_HEIGHT
+
+def new_frame():
+    global i_first_visible_text_line, y_text_start, num_visible_text_lines
+    y_text_start -= 1 # entire text glides 1 pixel up
+    
+    # check if the first line of text came out through the top
+    if y_text_start &lt; MARGIN_UP_DOWN:
+        i_first_visible_text_line = (i_first_visible_text_line + 1) % len(text)
+        y_text_start += TEXT_HEIGHT
+    
+    # is there room for another row
+    next_line_pos = y_text_start + TEXT_HEIGHT * num_visible_text_lines
+    if next_line_pos + TEXT_HEIGHT + MARGIN_UP_DOWN &lt; height:
+        num_visible_text_lines += 1
+        
+    draw()
+
+pygamebg.frame_loop(30, new_frame)
+"   >
+
+
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Рисуване на текст' data-toggle="tooltip"><a href="03_PyGame_24_Animation_Text.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Взаимодействие' data-toggle="tooltip"><a href="03_PyGame_30_Interaction.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Рисуване на текст' data-toggle="tooltip"><a href="03_PyGame_24_Animation_Text.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Взаимодействие' data-toggle="tooltip"><a href="03_PyGame_30_Interaction.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

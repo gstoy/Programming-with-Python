@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Как се прави анимация &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Движение на рисунки" href="03_PyGame_22_Animation_Motion.html" />
+    <link rel="prev" title="Анимация" href="03_PyGame_20_Animation.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Как се прави анимация<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Един прост начин да получите анимация е да поставите частта от програма, която рисува един кадър в отделна функция. Като правило, ние ще наричаме тази функция <em>new_frame</em> в програмите, въпреки че тя може да има друго име.</p>
+<div class="section" id="id2">
+<h2>Промяна на чертежите<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>За да получите анимация, функцията, която рисува кадър, трябва да създаде чертеж, малко по-различен от предишния при следващото повикване, тъй като без промени няма анимация. За да бъде новата рисунка различна, самата рисунка трябва да зависи от стойностите на някои променливи. Промяната на стойностите на променливите, от които зависи чертежът, ще доведе до различен чертеж.</p>
+<p>Например, ето как можем да създадем програма, която последователно показва по-малко и по-голямо сърце.</p>
+<a class="reference internal image-reference" href="../_images/heart_smaller.png"><img alt="../_images/heart_smaller.png" src="../_images/heart_smaller.png" style="width: 120px;" /></a>
+<a class="reference internal image-reference" href="../_images/heart_bigger.png"><img alt="../_images/heart_bigger.png" src="../_images/heart_bigger.png" style="width: 120px;" /></a>
+
+<div data-childcomponent="PyGame__anim_heart_blinking" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_heart_blinking data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="import pygame as pg, pygamebg
+canvas = pygamebg.open_window(200, 181, &quot;Heart&quot;)
+
+# images of the smaller and the bigger heart
+heart_images = [
+    pg.image.load(&quot;heart_smaller.png&quot;), 
+    pg.image.load(&quot;heart_bigger.png&quot;)
+]
+
+image_index = 0 # index of an image to be displayed
+
+def new_frame():
+    global image_index
+    image_index = 1 - image_index       # chosing the other image
+
+    canvas.fill(pg.Color(&quot;blue&quot;))         # paint background
+    canvas.blit(heart_images[image_index], (0, 0))
+
+pygamebg.frame_loop(2, new_frame)
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>Функцията използва променливата <em>image_index</em>, която получава само стойности 0 или 1. Тази променлива се използва като индекс (пореден номер) на изображение в списъка с изображения, който се състои от две изображения. Въз основа на променливата <em>image_index</em>, програмата решава кое от двете изображения ще бъде показано. С всяко ново изпълнение на функцията <em>new_frame</em> променливата <em>image_index</em> променя стойността (ако е била 0, получава стойност 1 и обратно), като по този начин променя изображението, което трябва да се покаже.</p>
+<p>Казват, че променливите, от които зависи рисунката, описват сцената. Може да има една или повече такива променливи. В примера със сърцето сцената се описва от една променлива, която е променливата <em>image_index</em>.</p>
+<p>В общия случай, когато създаваме нова анимационна рамка, използваме старите стойности на променливите, описващи сцената, за да изчислим техните нови стойности. По този начин новите стойности могат или не могат да се различават от старите. Ние наричаме това изчисление актуализация на сцената.</p>
+</div>
+<div class="section" id="id3">
+<h2>Глобални променливи<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>За да можете да актуализирате сцена във функцията <em>new_frame</em>, променливите, описващи сцената, трябва да имат стойности преди и след изпълнение на функцията <em>new_frame</em>. Затова трябва да формираме тези променливи (да им присвоим първите стойности) в основната част на програмата. Когато използваме такива променливи във функция, ги наричаме глобални променливи. За разлика от тях променливите, направени в самата функция, се наричат ​​локални променливи и съществуват само по време на изпълнение на функцията.</p>
+<p>Когато присвояваме стойности на глобална променлива във функция, трябва да посочим в началото на функцията, че това са променливи, които вече съществуват и се формират извън тази функция. За променливата <em>image_index</em> в горния пример, ние постигнахме това, като напишехме <code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">image_index</span></code> в първия ред на функцията. Ако не декларирахме променливата глобална, Python ще се опита да формира нова локална променлива със същото име, когато присвои стойност на променливата.</p>
+<p>Когато има няколко глобални променливи, които възнамеряваме да променим във функция, след думата <em>global</em> трябва да изброим имената на всички такива променливи, разделени със запетаи.</p>
+</div>
+<div class="section" id="id4">
+<h2>Скорост на анимацията<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Скоростта на анимация се определя от продължителността на всеки кадър, т.е. броя на кадрите, показани в единица време. За да посочим скоростта, с която се появяват последователни кадри, използваме съкращението (също мерна единица) fps - кадрите в секунда. Когато създаваме анимация, едно от нещата, които трябва да направим, е да изберем скоростта на изобразяване и да я зададем в нашата програма като броя на кадрите, които искаме програмата да създава и показва в секунда.</p>
+<p>В предишната програма използвахме 2 кадъра в секунда, за да получим ритъм, подобен на сърдечната честота. По този начин ясно разграничихме два кадъра, които се появяват последователно. За да създадем впечатление за движение, ни трябват само по-високи скорости и повече изображения.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Обикновено най-малко 15 кадъра в секунда се използват за анимация на движението, тъй като при по-бавни скорости на изобразяване движението може да изглежда прекъсващо. Например телевизионните предавания обикновено използват 24 кадъра в секунда, а в наши дни видеоигрите под 30 кадъра в секунда не се считат, че осигуряват достатъчно добро изживяване. Дори по-бързите анимации могат да осигурят още по-добри ефекти за някои зрители, но те също са по-скъпи за създаване и изобразяване.</p>
+<p>Ако зададем много висока скорост в програмите си, може да не е възможно нашият компютър да постигне такава скорост на генериране на изображения, нито такава скорост на показване. В този случай няма да възникнат грешки, но действителната (ефективна) честота на кадрите ще бъде по-малка (тази, която компютърът може да постигне).</p>
+
+    </p></div></div>
+<p>Анимацията на бягането от уводния текст може да се постигне с програма, много подобна на сърцето пример. Единствената фундаментална разлика е, че използва по-голям брой изображения (осем вместо две) и по-висока честота на кадрите.</p>
+<a class="reference internal image-reference" href="../_images/running1.png"><img alt="../_images/running1.png" src="../_images/running1.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/running2.png"><img alt="../_images/running2.png" src="../_images/running2.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/running3.png"><img alt="../_images/running3.png" src="../_images/running3.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/running4.png"><img alt="../_images/running4.png" src="../_images/running4.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/running5.png"><img alt="../_images/running5.png" src="../_images/running5.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/running6.png"><img alt="../_images/running6.png" src="../_images/running6.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/running7.png"><img alt="../_images/running7.png" src="../_images/running7.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/running8.png"><img alt="../_images/running8.png" src="../_images/running8.png" style="width: 50px;" /></a>
+
+<div data-childcomponent="PyGame__anim_running" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_running data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="import pygame as pg, pygamebg
+
+# setting the canvas to be the same size as images
+(width, height) = (300, 264)
+canvas = pygamebg.open_window(width, height, &quot;Running&quot;)
+
+num_images = 8
+images = []   # list that will contain images
+for i in range(1, num_images+1): # reading images running1.png, ..., running8.png into the list
+    image_name = &quot;running&quot; + str(i) + &quot;.png&quot;  # building image name from parts
+    images.append(pg.image.load(image_name))
+
+image_index = 0 # index of an image to be displayed
+
+def new_frame():
+    global image_index
+    image_index = image_index + 1 # switching to the next image
+    if image_index == num_images:    # if there is no next image ...
+        image_index = 0            # turn back to the first image
+    canvas.blit(images[image_index], (0, 0))
+
+pygamebg.frame_loop(15, new_frame)
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>Опитайте различни честоти на кадрите и вижте как този параметър влияе на външния вид на анимацията. Разбира се, освен броя на кадрите в секунда, цялостното преживяване се влияе и от това колко много последователни изображения се различават (повече изображения с по-малки разлики дават по-добър ефект, но това изисква по-висока честота на кадрите).</p>
+<hr class="docutils" />
+<p>Нека обобщим какво трябва да направите, за да създадете анимация:</p>
+<ul class="simple">
+<li><p>дефиниране на глобални променливи, които описват сцената (тези данни ще се променят по време на анимацията);</p></li>
+<li><p>дефинирайте функция <code class="docutils literal notranslate"><span class="pre">new_frame</span></code>, която актуализира данните за героите и обектите в сцената и след това начертава сцената (не забравяйте да изброите глобалните променливи, които се променят във функцията след думата <code class="docutils literal notranslate"><span class="pre">global</span></code>);</p></li>
+<li><p>в края на програмата извикайте функцията <code class="docutils literal notranslate"><span class="pre">pygamebg.frame_loop</span> <span class="pre">(fps,</span> <span class="pre">new_frame)</span></code>, където <em>fps</em> е желаната честота на кадрите. Функцията <em>frame_loop</em>, в допълнение към всичко, което <em>wait_loop</em> направи, също така извиква функцията <em>new_frame</em> искан брой пъти в секунда. Ето защо в анимациите ще завършваме програми с <em>frame_loop</em> вместо <em>wait_loop</em>.</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2>Анимации - въпроси<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="pygame__anim_quiz_frametime1">
+    <span data-component="question">Q-68: Свържете продължителността на кадъра с броя на кадрите в секунда.</span>
+	<span data-component=feedback>Опитай пак!</span>
+
+    <li data-component="draggable" id="pygame__anim_quiz_frametime1_drag1">10 fps </li>
+    <li data-component="dropzone" for="pygame__anim_quiz_frametime1_drag1"> 100 milliseconds</li>
+
+    <li data-component="draggable" id="pygame__anim_quiz_frametime1_drag2">20 fps </li>
+    <li data-component="dropzone" for="pygame__anim_quiz_frametime1_drag2"> 50 milliseconds</li>
+
+    <li data-component="draggable" id="pygame__anim_quiz_frametime1_drag3">50 fps </li>
+    <li data-component="dropzone" for="pygame__anim_quiz_frametime1_drag3"> 20 milliseconds</li>
+
+    <li data-component="draggable" id="pygame__anim_quiz_frametime1_drag4">100 fps </li>
+    <li data-component="dropzone" for="pygame__anim_quiz_frametime1_drag4"> 10 milliseconds</li>
+</ul></div>
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - предложение:</strong> Ако желаете, опитайте да създадете програма Python, която циклично ще показва избраните от вас снимки или други изображения по ваш избор (ако всичките ви снимки са с еднакъв размер, вече сте научили всичко необходимо). Имайте предвид, че честотата на кадрите може да е по-малка от 1 fps и може да не е цяло число (но трябва да бъде положителна). Например в програмата <em>слайдшоу</em>, която предлагаме, има естествена необходимост всяко изображение да продължи по-дълго от една секунда.</p>
+
+    </p></div></div>
+
+        <div class="course-box course-box-question course-content">
+        <div data-component="fillintheblank" id="pygame__anim_quiz_frametime2">
+            <p>За да се покаже всеки кадър за две секунди, колко кадъра в секунда трябва да се зададат в програмата?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^ *0[,\\.]5 *$", "regexFlags": "", "feedback": "<p>\u0412\u044f\u0440\u043d\u043e!</p>\n"}, {"regex": "^ *[0-9]+[,\\.]?[0-9]* *$", "regexFlags": "", "feedback": "<p>\u043e\u043f\u0438\u0442\u0430\u0439 \u043f\u0430\u043a.</p>\n"}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "<p>\u0440\u0435\u0437\u0443\u043b\u0442\u0430\u0442\u044a\u0442 \u0442\u0440\u044f\u0431\u0432\u0430 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0447\u0438\u0441\u043b\u043e.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pygame__anim_quiz_toggle">
+            <p>Q-69:  В примера се изискваше променливата <em>image_index</em> циклично да приема само онези стойности, които съответстват на позициите на изображенията в списъка. Когато имаме осем изображения, тези стойности са 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2 и т.н. В общия случай за <em>n</em> изображенията тези стойности са 0, 1, 2, … n-1, 0, 1, 2 и т.н.</p>
+<blockquote>
+<div><p>Спомнете си, че операторът % обозначава операцията за изчисляване на остатъка след разделянето. С тази операция можем да постигнем същата цел в по-кратки нотации. Коя от следните команди може еднакво да замени тази част от програмата?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image_index</span> <span class="o">=</span> <span class="n">image_index</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1"># move on to the next picture</span>
+<span class="k">if</span> <span class="n">image_index</span> <span class="o">==</span> <span class="n">num_images</span><span class="p">:</span>    <span class="c1"># if there is no next picture ...</span>
+    <span class="n">image_index</span> <span class="o">=</span> <span class="mi">0</span>            <span class="c1"># return to the first picture</span>
+</pre></div>
+</div>
+</div></blockquote>
+
+            <li data-component="answer"  id="pygame__anim_quiz_toggle_opt_a">image_index = image_index + 1 % num_images</li><li data-component="feedback" id="pygame__anim_quiz_toggle_opt_a">Опитай пак</li>
+            
+            <li data-component="answer"  id="pygame__anim_quiz_toggle_opt_b">image_index = (image_index % num_images) + 1</li><li data-component="feedback" id="pygame__anim_quiz_toggle_opt_b">Опитай пак</li>
+            
+            <li data-component="answer" data-correct id="pygame__anim_quiz_toggle_opt_c">image_index = (image_index + 1) % num_images</li><li data-component="feedback" id="pygame__anim_quiz_toggle_opt_c">Вярно</li>
+            
+            <li data-component="answer"  id="pygame__anim_quiz_toggle_opt_d">image_index = image_index % (num_images + 1)</li><li data-component="feedback" id="pygame__anim_quiz_toggle_opt_d">Опитай пак</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Анимация' data-toggle="tooltip"><a href="03_PyGame_20_Animation.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Движение на рисунки' data-toggle="tooltip"><a href="03_PyGame_22_Animation_Motion.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Анимация' data-toggle="tooltip"><a href="03_PyGame_20_Animation.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Движение на рисунки' data-toggle="tooltip"><a href="03_PyGame_22_Animation_Motion.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

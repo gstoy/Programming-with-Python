@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Скриптове и for цикли &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Събиране на данни" href="02_Console_11_collections.html" />
+    <link rel="prev" title="Сложно разклоняване" href="02_Console_09_elif.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="for">
+<h1>Скриптове и <em>for</em> цикли<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>Скриптове<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Хората често пишат кратки програми в Python и ги използват сами, за да изчислят или автоматизират нещо. Такива програми са известни и като скриптове. Не е необичайно скриптовете да имат някои или всички входни данни, съдържащи се в самия скрипт, вместо да бъдат заредени. Например следният скрипт изчислява 20-процентова отстъпка:</p>
+
+<div data-childcomponent="console__scripting_fixed" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__scripting_fixed data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+discount = 20
+regular_price = 250
+discounted_price = regular_price * (1 - discount / 100)
+print(regular_price, discounted_price)
+</textarea>
+</div>
+<p>Инструкциите за използване на този скрипт могат да бъдат: „В първите два реда на скрипта задайте желаните стойности и след това стартирайте скрипта.“</p>
+<p>Няма да видите подобна инструкция за програми, които инсталирате на вашия компютър или мобилен телефон. Ние наричаме такива програми приложения и те са написани така, че потребителите не трябва да знаят (и най-често не могат да знаят) как изглеждат правилата на тази програма.</p>
+<p>При скриптове няма строго разделение между потребители и разработчици, както при приложенията. Сценариите често се пишат за лична употреба или за потребител, който използва или разбира програмиране. Всички програми в това ръководство всъщност са повече скриптове, отколкото приложения.</p>
+<p>Вече подчертахме, че това ръководство не е предназначено само за бъдещи професионалисти в програмирането. Ако не програмирате приложения, все още можете да се възползвате от програмирането. Можете да напишете скрипт или да персонализирате съществуващ такъв, както се очаква в предполагаемата инструкция от предишния пример.</p>
+</div>
+<div class="section" id="id2">
+<h2>Повтарящи се изчисления за множество данни<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Нека направим предишния пример по-общ. Да предположим, че в един магазин имаме право на 20% отстъпка над редовните цени. Интересуваме се от намалени цени на различни продукти, чиито редовни цени познаваме.</p>
+<p><strong>Рестартиране на програми, които зареждат данни</strong></p>
+<p>Решението, за което вече знаем как да пишем, е да заредим редовната цена на продукта и след това да изчислим и отпечатаме намалената цена. Тази програма може да изглежда така:</p>
+
+<div data-childcomponent="console__scripting_input" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__scripting_input data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+discount = 20
+regular_price = int(input())
+discounted_price = regular_price * (1 - discount / 100)
+print(regular_price, discounted_price)
+</textarea>
+</div>
+<p>Можем да стартираме програмата многократно, като всеки път определяме редовна цена за един от продуктите, от които се интересуваме.</p>
+<p><strong>Множество входяща информация в самата програма</strong></p>
+<p>В предишния пример беше необходимо да стартирате програмата няколко пъти и да въвеждате данните (редовна цена на продукта) всеки път. В случай, че предварително знаем всички данни, които бихме въвели една по една при различно изпълнение на програмата, тогава е по-удобно да въведете всички тези данни директно в програмата и да повторите изчисляването и отпечатването на резултатите за всеки от данните в едно изпълнение.</p>
+</div>
+<div class="section" id="id3">
+<h2><em>for</em> оператор<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>За да можем да повторим част от програмата за всякa част от множеството данни, се нуждаем от оператора <strong>for</strong>, който позволява да се повтарят други оператори. Сега ще видим един от начините за използване на <em>for</em> оператор, а в следващите уроци ще видим някои други форми на <em>for</em>.</p>
+<p>Да се върнем към примера с намалената цена. Да речем, че редовните цени на продуктите, от които се интересуваме, са 250, 120 и 310 и искаме да изчислим намалените цени за тези продукти с еднократно изпълнение. Ето как можем да го направим:</p>
+
+<div data-childcomponent="console__scripting_for" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__scripting_for data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+discount = 20
+for regular_price in (250, 120, 310):
+    discounted_price = regular_price * (1 - discount / 100)
+    print(regular_price, discounted_price)
+</textarea>
+</div>
+<p>Note: Забележка: нотация (250, 120, 310) се нарича <em>комплект</em>.</p>
+<p>Изпълнявайки програмата, виждаме, че тя извежда:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">250</span> <span class="mf">200.0</span>
+<span class="mi">120</span> <span class="mf">96.0</span>
+<span class="mi">310</span> <span class="mf">248.0</span>
+</pre></div>
+</div>
+<p>Забелязваме, че последните два реда от програмата са изпълнени три пъти, като променливата regular_price получава стойностите 250, 120, 310 в този ред. Постигнахме това с изявлението за. Частите от програмата, които се повтарят, се наричат цикли, така че можем да кажем, че в предишния пример сме използвали цикъл.</p>
+<p>Следващата фигура показва основните елементи на цикъла за:</p>
+<a class="reference internal image-reference" href="../_images/console_loop_tuple.png"><img alt="../_images/console_loop_tuple.png" class="align-center" src="../_images/console_loop_tuple.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>Необходимите елементи се изписват с червено (думите <code class="docutils literal notranslate"><span class="pre">for</span></code>, <code class="docutils literal notranslate"><span class="pre">in</span></code> и двоеточието <code class="docutils literal notranslate"><span class="pre">:</span></code> в първия ред). Тези елементи са изписани по един и същи начин във всеки <em>for</em> оператор.</p></li>
+<li><p><em>Променливата на цикъла</em> е написана в синьо. На това място пишем името на променливата, която ще приема стойностите, посочени в комплекта. В нашия пример променливата на цикъла е <em>regular_price</em>.</p></li>
+<li><p>Набор от стойности е написан в зелено. На това място пишем стойности, разделени със запетая в скоби. Това са стойностите, които променливата на цикъла ще вземе на свой ред. В нашия пример комплектът е (250, 120, 310).</p></li>
+<li><p><em>Тялото на цикъла</em> е изписано с черно. Това са команди, които се изпълняват веднъж за всяка стойност на променливата на цикъла. Променливите на цикъла могат или не могат да се използват в операторите на тялото на цикъла.</p></li>
+</ul>
+<p>Операторите на тялото на цикъла се пишат с отстъпи по отношение на първия ред на оператора for. Обичайно е да се използват 4 полета за отстъп и ние ще се придържаме към тази препоръка.</p>
+<div class="section" id="id4">
+<h3>Примери и задачи<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Пример - кога да тръгна</strong></p>
+<p>Рони трябва да пристигне до определено място не по-късно от 17:00. В зависимост от начина на пътуване, който е избрал, Рони може да се нуждае от 55, 70, 85 или 95 минути. Напишете програма, която отпечатва за всеки начин на пътуване, когато Рони трябва да си тръгне най-късно, за да пристигне навреме.</p>
+
+    </p></div></div>
+<p>Програма, която решава тази задача, може да изглежда така:</p>
+
+<div data-childcomponent="console__scripting_start_travel" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__scripting_start_travel data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+arrival = 17*60
+for travel_duration in (55, 70, 85, 95):
+    leaving = arrival - travel_duration
+    leaving_hours = leaving // 60
+    leaving_minutes = leaving % 60
+    print("If the travel lasts", travel_duration, "minutes, Ronnie should leave at", leaving_hours, "hours and", leaving_minutes, "minutes.")
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - продължителност на пътуването</strong></p>
+<p>Джордж възнамерява да започне пътуване с кола на 600 километра в 9:00 ч. И се интересува от времето на пристигане, ако е пътувал със средна скорост от 90, 100, 120 или 130 километра в час. Завършете програмата, за да изброите времето на пристигане до местоназначението за всяка от гореспоменатите средни скорости.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__scripting_speed" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__scripting_speed data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+path_length = 600 # Km
+leaving = 9       # h
+for a in ():  # fix
+    trip_duration = path_length / speed # h
+    arrival = leaving + trip_duration    # h
+    arrival_hours = int(arrival)
+    arrival_minutes = round((arrival - arrival_hours) * 60)
+    print("At", speed, "km / h the arrival time is at", arrival_hours, "hours and", arrival_minutes, "minutes.")
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - крайна оценка</strong></p>
+<p>Сумата от 5-те оценки на Кейти досега е 23. Кейти очаква друга оценка от последната контролна задача. Завършете програмата по-долу, така че за всяка възможна крайна оценка (1, 2, 3, 4 или 5) тя отпечатва каква би била средната оценка в този случай.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__scripting_final_mark" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__scripting_final_mark data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+sum_grades_so_far = 23
+num_grades_so_far = 5
+for # complete the statement
+    average_grade = 0 # fix
+    print("With the final grade", final_grade, "average grade would be", average_grade)
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - Джобни</strong></p>
+<p>Тео прави план за изразходване на джобните си пари за 14-дневна ваканция. Напишете програма, която при среднодневно харчене от 5, 10 или 20 евро, показва от колко Тео ще има нужда във всеки от случаите.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__scripting_allowance" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__scripting_allowance data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+num_days = 14
+# finish the program
+</textarea>
+</div>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Сложно разклоняване' data-toggle="tooltip"><a href="02_Console_09_elif.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Събиране на данни' data-toggle="tooltip"><a href="02_Console_11_collections.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Сложно разклоняване' data-toggle="tooltip"><a href="02_Console_09_elif.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Събиране на данни' data-toggle="tooltip"><a href="02_Console_11_collections.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

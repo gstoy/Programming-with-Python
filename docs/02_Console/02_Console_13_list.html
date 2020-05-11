@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Списъци &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Преброяване c помощта на списъци" href="02_Console_14_computing_with_lists.html" />
+    <link rel="prev" title="Преброяване и сумиране" href="02_Console_12_algo_count_accumulate.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Списъци<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Досега споменахме низовете и диапазона като видове колекции и видяхме, че низът може да се използва и като колекция. Друг много важен и често използван тип колекции са списъците.</p>
+<div class="section" id="id2">
+<h2>Списъци и низове<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Списъците, както и низовете, могат да бъдат зададени чрез изброяване на елементите, с изключение на това, че елементите на списъка са написани между квадратни скоби:</p>
+
+<div data-childcomponent="console__collections_list1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+for x in [2, 5, 8, 3]:
+    print(x)
+</textarea>
+</div>
+<p>Списъците са в много отношения подобни на низовете. Всички характеристики низовете, споменати в главата на колекциите, се прилагат и за списъци:</p>
+<ul class="simple">
+<li><p>Списък може да бъде поставен и в променлива и обратно - елементите на списъка могат да бъдат присвоени на подходящ брой променливи.</p></li>
+<li><p>Елементите на списъка могат да бъдат достъпни чрез името на списъка и поредния номер (индекс) на елемента, изписан в квадратни скоби</p></li>
+<li><p>дължината на списъка се получава от функцията <em>len</em></p></li>
+</ul>
+
+<div data-childcomponent="console__collections_list2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+names = ["Tom", "Polly", "Filip", "Mary"]
+t, p, f, m = names
+print("p =", p)
+print("names[0] =", names[0])
+print("len(names) =", len(names))
+</textarea>
+</div>
+<p>Списъците също имат някои функции, които ги отличават от низовете. Например списъците могат да бъдат разширени с помощта на функцията за добавяне:</p>
+
+<div data-childcomponent="console__collections_list_append" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list_append data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = []
+a.append(3)
+a.append(7)
+a.append(2)
+
+for x in a:
+    print(x)
+</textarea>
+</div>
+<p>Също така елементите на списъка могат да променят стойностите си и могат да бъдат изтрити от списъка:</p>
+
+<div data-childcomponent="console__collections_list_mutable" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list_mutable data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = [3, 7, 2]
+print("Initial list:")
+for x in a:
+    print(x)
+
+a[0] = 5
+print("Changed list:")
+for x in a:
+    print(x)
+
+del a[1]
+print("Shorter list:")
+for x in a:
+    print(x)
+</textarea>
+</div>
+<p>Такива операции с низове не са възможни. Веднъж направен, низът остава такъв, какъвто е. Не може да бъде променен - той не може да променя дължината или стойностите на отделните елементи. Променлива, съдържаща низ, може само да получи изцяло нов низ като стойност, но по този начин предишният низ не е модифициран, а е престанал да съществува. Ето защо се казва, че низовете са неизменни.</p>
+<p>Tuples могат да се използват за събиране на данни, които не възнамеряваме да променяме при изпълнение на програма (въпреки че можем да ги променим ръчно преди да изпълним програма). Използвайки низове, ние гарантираме, че данните няма да се променят случайно и програмата ще работи малко по-ефективно с низа, отколкото би направила със списъка.</p>
+<p>Комплект <em>t</em> може да се преобразува в списък <em>a</em> по време на изпълнението на програмата и обратно: ‘’a = list(t)’’ или ‘’t = tuple(a)’’, но такива преобразувания рядко са необходими и по-добре да ги избягвате (ако често се прилагат за големи колекции, реализации като това може да забави значително програмата).</p>
+</div>
+<div class="section" id="id3">
+<h2>Съставяне на списък<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Както вече видяхме, можем постепенно да изграждаме списъци в програма. Например, ако ни се даде набор от числа, от които искаме да копираме тези, които са по-големи от нула (и изпълним някаква допълнителна задача с тези числа последни), можем да направим това:</p>
+
+<div data-childcomponent="console__collections_list_create" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list_create data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+numbers  = (2, 5, -2, 1, -3, 4, -7, 3)
+positive_numbers = []
+for x in numbers:
+    if x > 0:
+        positive_numbers.append(x)
+
+for x in positive_numbers:
+    print(x)
+</textarea>
+</div>
+<p>В началото имаме празен списък, а след това в цикъла използваме функцията за добавяне, за да добавим към списъка елементите, които искаме.</p>
+</div>
+<div class="section" id="id4">
+<h2>Зареждане на списък<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>По същия начин можем да заредим данни в списък:</p>
+
+<div data-childcomponent="console__collections_list_read1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list_read1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = []
+n = int(input("How many elements to load: "))
+for i in range(n):
+    x = float(input("Please enter an element: "))
+    a.append(x)
+
+print("The elements of the list are:")
+for x in a:
+    print(x)
+</textarea>
+</div>
+<p>Друг начин за зареждане на списък е първо да формирате списък с необходимата дължина и след това да присвоите заредените стойности директно на елементите на списъка в цикъла.</p>
+
+<div data-childcomponent="console__collections_list_read2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list_read2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+n = int(input("How many elements to load: "))
+a = [0] * n
+for i in range(n):
+    a[i] = float(input("Please enter an element: "))
+
+print("The elements of the list are:")
+for x in a:
+    print(x)
+</textarea>
+</div>
+<p>Използвахме израза ‘’a = [0] * n’’, за да формираме списък от <em>n</em> елемента. Операцията ‘’[0] * n’’ се нарича умножение на списъка. Резултатът от умножаването на списъка е сплотяване на n повторения на дадения списък. Например [0]*5 е списъкът [0, 0, 0, 0, 0], а [2, 7] * 3 е списъкът [2, 7, 2, 7, 2, 7].</p>
+<p>Ако потребителят въведе всички елементи от списъка в един ред, разделен с интервали, ние пишем програмата така:</p>
+
+<div data-childcomponent="console__collections_list_read_line" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list_read_line data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a_str = input("Enter all the elements: ")
+a = []
+for s in a_str.split():
+    a.append(float(s))
+
+print("The elements of the list are:")
+for x in a:
+    print(x)
+</textarea>
+</div>
+<p>Използвахме функцията <em>split()</em>, за да разделим въведения текст на по-къси низове, съдържащи отделни числа.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><em>split()</em> <strong>функция</strong>:</p>
+<p>Функцията split() е символ или текст, които искаме да използваме като разделител. Ако разделителят не е посочен, като интервал ‘’ се приема по подразбиране.</p>
+<p><code class="code docutils literal notranslate"><span class="pre">&quot;1234</span> <span class="pre">56&quot;.split()</span> <span class="pre">-&gt;</span> <span class="pre">[&quot;1234&quot;,</span> <span class="pre">&quot;56&quot;]</span></code></p>
+<p><code class="code docutils literal notranslate"><span class="pre">&quot;1234,56&quot;.split(',')</span> <span class="pre">-&gt;</span> <span class="pre">[&quot;1234&quot;,</span> <span class="pre">&quot;56&quot;]</span></code></p>
+<p>Резултатът от функцията split() е списък с низове. Броят на по-късите низове, които получаваме в резултат зависи от броя и разположението на разделителните знаци в началния низ. Например, ако текстът съдържа само един разделител някъде по средата, ще получим два по-къси низа. Всеки нов вид на символа за разделяне може да произведе един низ повече в получения списък (ако той наистина отделя част от началния низ от останалата част от текста).</p>
+<p><code class="code docutils literal notranslate"><span class="pre">&quot;1;23;456;7&quot;.split(';')</span> <span class="pre">-&gt;</span> <span class="pre">[&quot;1&quot;,</span> <span class="pre">&quot;23&quot;,</span> <span class="pre">&quot;456&quot;,</span> <span class="pre">&quot;7&quot;]</span></code></p>
+<p><code class="code docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">1</span>&#160; <span class="pre">234</span>&#160;&#160;&#160; <span class="pre">56</span> <span class="pre">7</span> <span class="pre">&quot;.split()</span> <span class="pre">-&gt;</span> <span class="pre">[&quot;1&quot;,</span> <span class="pre">&quot;234&quot;,</span> <span class="pre">&quot;56&quot;,</span> <span class="pre">&quot;7&quot;]</span></code></p>
+
+    </p></div></div>
+<div class="section" id="id5">
+<h3>Примери и задачи<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Пример - продажби</strong></p>
+<p>В началото на скрипта са дадени стойностите на няколко продажби в един магазин. Извадете продажбите със стойност по-голяма от 1000 и по-малка или равна на 4000 в списък, след което разпечатайте елементите от списъка.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__collections_list_sales" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list_sales data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+sales = (241, 5372, 1278, 9335, 2438, 127, 529, 6027)
+lower_bound = 1000
+upper_bound = 4000
+# complete the program
+</textarea>
+</div>
+<p>Задачата се решава по следния начин:</p>
+
+<div data-childcomponent="console__collections_list_sales_sol" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list_sales_sol data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+sales = (241, 5372, 1278, 9335, 2438, 127, 529, 6027)
+lower_bound = 1000
+upper_bound = 4000
+
+requested_sales = []
+for value in sales:
+    if value > lower_bound and value <= upper_bound:
+        requested_sales.append(value)
+
+print('Requested sales:')
+for value in requested_sales:
+    print(value)
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Пример - скок-промени</strong></p>
+<p>Даден е набор от числа. Извадете числа, които се различават от предшествениците си поне с 10, след което ги разпечатайте.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__collections_list_increasing" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list_increasing data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+numbers = (5, 7, 9, 11, 22, 18, 15, 13, 36, 31, 27, 14, 13, 20)
+# complete the program
+</textarea>
+</div>
+<p>Едно възможно решение е:</p>
+
+<div data-childcomponent="console__collections_list_increasing_sol" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list_increasing_sol data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+numbers = (5, 7, 9, 11, 22, 18, 15, 13, 36, 31, 27, 14, 13, 20)
+leap_changes = []
+
+for i in range(1, len(numbers)):
+    if abs(numbers[i] - numbers[i-1]) >= 10:
+        leap_changes.append(numbers[i])
+
+print('Leap changes:')
+for x in leap_changes:
+    print(x)
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - четни числа</strong></p>
+<p>Даден е набор от числа. Извадете числата, които са равномерни, и след това ги разпечатайте.</p>
+<p>Спомнете си, че числото <em>x</em> е четно ако <span class="math notranslate nohighlight">\(x \% 2 == 0\)</span></p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__collections_list_even" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list_even data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = (35, 12, 32, 17, 64, 98, 77, 46, 9)
+even = []
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - всяка трета дума</strong></p>
+<p>Даден е набор от низове. Извадете низовете, чиито индекси се делят на 3, след което ги отпечатайте.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__collections_list_every_third" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list_every_third data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+words = ('All', 'the', 'other', 'words', 'and', 'phrases', 'are', 'not', 'so', 'important')
+every_third = []
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - под нулата</strong></p>
+<p>Даден е набор от числа. Извадете числата, които са отрицателни, а техните предшественици са положителни, след което отпечатайте извлечените числа.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__collections_list_neg_after_pos" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__collections_list_neg_after_pos data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = (1, -2, 3, 5, -4, -1, -3, 2, -7)
+extracted = []
+</textarea>
+</div>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Преброяване и сумиране' data-toggle="tooltip"><a href="02_Console_12_algo_count_accumulate.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Преброяване c помощта на списъци' data-toggle="tooltip"><a href="02_Console_14_computing_with_lists.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Преброяване и сумиране' data-toggle="tooltip"><a href="02_Console_12_algo_count_accumulate.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Преброяване c помощта на списъци' data-toggle="tooltip"><a href="02_Console_14_computing_with_lists.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

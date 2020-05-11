@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Рисуване на правоъгълници, елипси и кръгове &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Рисуване на прави линии и многоъгълници" href="03_PyGame_11b_Drawing_LinePolygon.html" />
+    <link rel="prev" title="Рисуване" href="03_PyGame_10_Drawing.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Рисуване на правоъгълници, елипси и кръгове<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Всички функции за рисуване в библиотеката на PyGame започват с <code class="docutils literal notranslate"><span class="pre">pg.draw</span></code>. В зависимост от това каква форма искаме да нарисуваме, наричаме различни функции. В следващите обяснения значението на параметрите е:</p>
+<ul class="simple">
+<li><p>Параметърът <em>canvas</em> е областта, в която рисуваме. В това ръководство програмите вече ще имат оформена променлива (по-конкретно обект) <em>canvas</em>, получена в резултат на извикване на функцията <code class="docutils literal notranslate"><span class="pre">pygamebg.open_window</span></code>.</p></li>
+<li><p>Параметърът <em>color</em> е цветът, който използваме за рисуване. Както беше казано по-рано, един цвят може да бъде определен от неговото име (например <code class="code docutils literal notranslate"><span class="pre">pg.Color</span> <span class="pre">(&quot;black&quot;)</span></code>) или като комплект или списък от 3 елемента (например <code class="code docutils literal notranslate"><span class="pre">[</span> <span class="pre">255,</span> <span class="pre">0,</span> <span class="pre">0]</span></code> за червено).</p></li>
+<li><p>Параметърът <em>rectangle</em> е комплект или списък от четири елемента: math: <cite>(x, y, w, h)</cite> или <span class="math notranslate nohighlight">\([x, y, w, h]\)</span>, който описва правоъгълник, както беше обяснено по-рано (координати на горния ляв връх, ширината и височината на правоъгълника).</p></li>
+<li><p>Параметърът <em>center</em> представлява точка. Както бе споменато по-рано, една точка може да бъде определена като комплект (или списък) от 2 елемента, които представляват координатите на точката в прозореца, в който рисуваме.</p></li>
+<li><p>Параметърът <em>thickness</em> е дебелината на линиите, които използваме за рисуване. Във функциите, които обясняваме тук, този параметър е незадължителен и може да бъде пропуснат.</p></li>
+</ul>
+<p>Сега ще видим по-подробни описания на функциите за рисуване на правоъгълници, елипси и кръгове. След всяко описание на функцията е даден кратък пример за един или два реда код. Можете да стартирате всеки от тези примери, като го копирате в програмата по-долу (която засега не рисува нищо). Снимките, които следват примерите, се получават по същия начин.</p>
+
+<div data-childcomponent="pygame__drawing_primirives_def" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pygame__drawing_primirives_def data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+       >
+import pygame as pg, pygamebg
+canvas = pygamebg.open_window(200, 200, "Pygame")
+
+canvas.fill(pg.Color("gray"))
+
+pygamebg.wait_loop()
+</textarea>
+</div>
+<div class="section" id="id2">
+<h2>Рисуване на правоъгълник<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>За да нарисуваме правоъгълник използваме функцията <code class="docutils literal notranslate"><span class="pre">pg.draw.rect</span></code>, има две форми:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">rectangle</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span>
+<span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">rectangle</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Използваме формата без параметъра <em>thickness</em> когато искаме и вътрешността на правоъгълника да бъде запълнена с посочения цвят.</p>
+<p>Например, първото от следните две твърдения означава:</p>
+<ul class="simple">
+<li><p>нарисувайте правоъгълник (функция <em>rect</em>)</p></li>
+<li><p>боядисвайте го черно (параметърът (0, 0, 0) определя черен цвят)</p></li>
+<li><p>Горната лява върха на правоъгълника има координати (40, 80)</p></li>
+<li><p>ширината на правоъгълника е 50, а височината - 30 пиксела</p></li>
+<li><p>трябва да се очертае само рамката на правоъгълника, а линиите трябва да са с дебелина 3 пиксела</p></li>
+</ul>
+<p>Второто твърдение означава:</p>
+<ul class="simple">
+<li><p>нарисувайте правоъгълник (функция <em>rect</em>)</p></li>
+<li><p>боядисвайте го черно (параметър pg.Color(“black”) също посочва черен цвят)</p></li>
+<li><p>Горната лява върха на правоъгълника има координати (140, 80)</p></li>
+<li><p>правоъгълникът трябва да бъде 20 пиксела както широк, така и висок, така че всъщност ще бъде квадрат</p></li>
+<li><p>Квадратът ще бъде запълнен с цвят, тъй като няма параметър за дебелина</p></li>
+</ul>
+
+<div data-childcomponent="pygame__drawing_rectangles_def" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pygame__drawing_rectangles_def data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+pg.draw.rect(canvas, (0, 0, 0), (40, 80, 50, 30), 3)
+pg.draw.rect(canvas, pg.Color("black"), (140, 80, 20, 20))
+</textarea>
+</div>
+<a class="reference internal image-reference" href="../_images/drawing_rectangles.png"><img alt="../_images/drawing_rectangles.png" class="align-center" src="../_images/drawing_rectangles.png" style="width: 200px;" /></a>
+</div>
+<div class="section" id="id3">
+<h2>Рисуване на елипса<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>За да нарисуваме елипса, използваме функцията <code class="docutils literal notranslate"><span class="pre">pg.draw.ellipse</span></code>, със или без параметъра за дебелина:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">ellipse</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">rectangle</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span>
+<span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">ellipse</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">rectangle</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Параметърът * правоъгълник * представлява правоъгълника, в който е вписана елипсата, а останалите параметри имат същото значение като преди. Ако имаме нужда от него, можем да изчислим центъра и главните и второстепенни оси на елипсата, използвайки комплекта <span class="math notranslate nohighlight">\((x, y, w, h)\)</span> или списъка <span class="math notranslate nohighlight">\([x, y, w, h]\)</span> , който дефинира правоъгълника. Координатите на центъра на правоъгълника, който е и центърът на елипса, са <span class="math notranslate nohighlight">\((x + w/2, y + h/2)\)</span>, а главните и второстепенните оси на елипсата са <span class="math notranslate nohighlight">\(w/2\)</span> and <span class="math notranslate nohighlight">\(h/2\)</span>. Така например</p>
+
+<div data-childcomponent="pygame__drawing_ellipse_def" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pygame__drawing_ellipse_def data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+pg.draw.ellipse(canvas, pg.Color("yellow"), (100, 160, 60, 40))
+</textarea>
+</div>
+<p>рисува жълто изпълнена елипса. Центърът на елипсата е центърът на посочения правоъгълник, който е в точка (130, 180). Хоризонталната полуоса на елипсата е дълга 30 пиксела, а вертикалната 20.</p>
+<a class="reference internal image-reference" href="../_images/drawing_ellipse.png"><img alt="../_images/drawing_ellipse.png" class="align-center" src="../_images/drawing_ellipse.png" style="width: 200px;" /></a>
+</div>
+<div class="section" id="id4">
+<h2>Рисуване на кръг<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>За да нарисуваме кръг използваме функцията <code class="docutils literal notranslate"><span class="pre">pg.draw.circle</span></code>, със или без параметъра за дебелина:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span>
+<span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Параметърът <em>center</em> е точка, представляваща центъра на окръжността, а параметърът <em>radius</em> е число, представляващо радиуса на окръжността в пиксели. Например следното изявление очертава червен кръг с дебелина 3 пиксела с радиус 50 пиксела, чийто център е в точка (100, 100):</p>
+
+<div data-childcomponent="pygame__drawing_circle_def" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pygame__drawing_circle_def data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+pg.draw.circle(canvas, pg.Color("red"), (100, 100), 50, 3)
+</textarea>
+</div>
+<a class="reference internal image-reference" href="../_images/drawing_circle.png"><img alt="../_images/drawing_circle.png" class="align-center" src="../_images/drawing_circle.png" style="width: 200px;" /></a>
+<p>Ако последният параметър (ширина на хода 3) беше пропуснат, вътрешността на кръга също щеше да бъде червена.</p>
+</div>
+<div class="section" id="id5">
+<h2>Рисуване на правоъгълници, елипси и кръгове - въпроси<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Проверете колко разбирате и помните за тези функции на рисуване:</p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="pygame__drawing_quiz_circle_arglist">
+            <p>Q-43: Какво трябва да се уточни, когато рисувате кръг?</p>
+
+            <li data-component="answer"  id="pygame__drawing_quiz_circle_arglist_opt_a">Горни леви координати на върха</li><li data-component="feedback" id="pygame__drawing_quiz_circle_arglist_opt_a">Горните леви координати на върха се посочват при рисуване на елипса или правоъгълник</li>
+            
+            <li data-component="answer" data-correct id="pygame__drawing_quiz_circle_arglist_opt_b">Радиус</li><li data-component="feedback" id="pygame__drawing_quiz_circle_arglist_opt_b">Правилно</li>
+            
+            <li data-component="answer" data-correct id="pygame__drawing_quiz_circle_arglist_opt_c">Координати на центъра</li><li data-component="feedback" id="pygame__drawing_quiz_circle_arglist_opt_c">Правилно</li>
+            
+            <li data-component="answer"  id="pygame__drawing_quiz_circle_arglist_opt_d">Ширина и височина</li><li data-component="feedback" id="pygame__drawing_quiz_circle_arglist_opt_d">Ширината и височината са посочени, когато рисувате елипса или правоъгълник</li>
+            
+            <li data-component="answer" data-correct id="pygame__drawing_quiz_circle_arglist_opt_e">Цвят</li><li data-component="feedback" id="pygame__drawing_quiz_circle_arglist_opt_e">Правилно</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pygame__drawing_quiz_circle_right_args">
+            <p>Q-44: За да нарисувате кръг с център <span class="math notranslate nohighlight">\((100, 100)\)</span>, чийто радиус е <span class="math notranslate nohighlight">\(30\)</span> пиксела, използвайки линия <span class="math notranslate nohighlight">\(5\)</span> пиксела широка, ще използваме?</p>
+
+            <li data-component="answer"  id="pygame__drawing_quiz_circle_right_args_opt_a">pg.draw.circle(canvas, color, 100, 100, 30, 5)</li><li data-component="feedback" id="pygame__drawing_quiz_circle_right_args_opt_a">Опитай пак</li>
+            
+            <li data-component="answer" data-correct id="pygame__drawing_quiz_circle_right_args_opt_b">pg.draw.circle(canvas, color, (100, 100), 30, 5)</li><li data-component="feedback" id="pygame__drawing_quiz_circle_right_args_opt_b">Правилно</li>
+            
+            <li data-component="answer"  id="pygame__drawing_quiz_circle_right_args_opt_c">pg.draw.circle(canvas, color, (100, 100, 30, 5))</li><li data-component="feedback" id="pygame__drawing_quiz_circle_right_args_opt_c">Опитай пак</li>
+            
+            <li data-component="answer"  id="pygame__drawing_quiz_circle_right_args_opt_d">pg.draw.circle(canvas, color, (100, 100), (30, 5))</li><li data-component="feedback" id="pygame__drawing_quiz_circle_right_args_opt_d">Опитай пак</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pygame__drawing_quiz_circle_opt_arg">
+            <p>Q-45: Разликата между <cite>pg.draw.circle(canvas, color, (cx, cy), r)</cite> и <cite>pg.draw.circle(canvas, color, (cx, cy), r, 1)</cite> е:</p>
+
+            <li data-component="answer"  id="pygame__drawing_quiz_circle_opt_arg_opt_a">последното рисува елипса, чиито полу-големи и полу-малки оси са равни r и 1..</li><li data-component="feedback" id="pygame__drawing_quiz_circle_opt_arg_opt_a">Опитай пак</li>
+            
+            <li data-component="answer"  id="pygame__drawing_quiz_circle_opt_arg_opt_b">последното запълва вътрешността на кръга с цвят.</li><li data-component="feedback" id="pygame__drawing_quiz_circle_opt_arg_opt_b">Опитай пак</li>
+            
+            <li data-component="answer" data-correct id="pygame__drawing_quiz_circle_opt_arg_opt_c">първият рисува диск (запълнен кръг), а вторият кръгова линия.</li><li data-component="feedback" id="pygame__drawing_quiz_circle_opt_arg_opt_c">Правилно</li>
+            
+            <li data-component="answer"  id="pygame__drawing_quiz_circle_opt_arg_opt_d">първата рисува кръгова линия, а втората диск</li><li data-component="feedback" id="pygame__drawing_quiz_circle_opt_arg_opt_d">Опитай пак</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pygame__drawing_quiz_rect_args_1">
+            <p>Q-46: Какво НЕ е посочено, когато рисувате правоъгълник?</p>
+
+            <li data-component="answer"  id="pygame__drawing_quiz_rect_args_1_opt_a">Горни леви координати на върха</li><li data-component="feedback" id="pygame__drawing_quiz_rect_args_1_opt_a">Опитай пак</li>
+            
+            <li data-component="answer"  id="pygame__drawing_quiz_rect_args_1_opt_b">Ширина на четката</li><li data-component="feedback" id="pygame__drawing_quiz_rect_args_1_opt_b">Опитай пак</li>
+            
+            <li data-component="answer"  id="pygame__drawing_quiz_rect_args_1_opt_c">Ширина</li><li data-component="feedback" id="pygame__drawing_quiz_rect_args_1_opt_c">Опитай пак</li>
+            
+            <li data-component="answer"  id="pygame__drawing_quiz_rect_args_1_opt_d">Височина</li><li data-component="feedback" id="pygame__drawing_quiz_rect_args_1_opt_d">Опитай пак</li>
+            
+            <li data-component="answer" data-correct id="pygame__drawing_quiz_rect_args_1_opt_e">Координати на центъра</li><li data-component="feedback" id="pygame__drawing_quiz_rect_args_1_opt_e">Correct</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pygame__drawing_quiz_rect_args_2">
+            <p>Q-47: За да нарисувате правоъгълник, чийто горен ляв връх е в точка
+:math: <cite>(100, 100)</cite>, <span class="math notranslate nohighlight">\(30\)</span> пиксела широчина и <span class="math notranslate nohighlight">\(50\)</span>
+пиксели височина, коя функция трябва да се извърши?</p>
+
+            <li data-component="answer"  id="pygame__drawing_quiz_rect_args_2_opt_a">pg.draw.rect(canvas, color, 100, 100, 30, 50)</li><li data-component="feedback" id="pygame__drawing_quiz_rect_args_2_opt_a">Опитай пак</li>
+            
+            <li data-component="answer"  id="pygame__drawing_quiz_rect_args_2_opt_b">pg.draw.rect(canvas, color, (100, 100), (30, 50))</li><li data-component="feedback" id="pygame__drawing_quiz_rect_args_2_opt_b">Опитай пак</li>
+            
+            <li data-component="answer"  id="pygame__drawing_quiz_rect_args_2_opt_c">pg.draw.rect(canvas, color, (100, 100), 30, 50)</li><li data-component="feedback" id="pygame__drawing_quiz_rect_args_2_opt_c">Опитай пак</li>
+            
+            <li data-component="answer" data-correct id="pygame__drawing_quiz_rect_args_2_opt_d">pg.draw.rect(canvas, color, (100, 100, 30, 50))</li><li data-component="feedback" id="pygame__drawing_quiz_rect_args_2_opt_d">Correct</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pygame__drawing_quiz_rect_args_3">
+            <p>Q-48: За да нарисувате правоъгълник, чийто горен ляв връх е в точка
+<span class="math notranslate nohighlight">\((80, 80)\)</span>, и долен десен връх в точка
+<span class="math notranslate nohighlight">\((130, 160)\)</span>, коя функция трябва да се извърши:</p>
+
+            <li data-component="answer" data-correct id="pygame__drawing_quiz_rect_args_3_opt_a">pg.draw.rect(canvas, color, (80, 80, 50, 80))</li><li data-component="feedback" id="pygame__drawing_quiz_rect_args_3_opt_a">Correct</li>
+            
+            <li data-component="answer"  id="pygame__drawing_quiz_rect_args_3_opt_b">pg.draw.rect(canvas, color, (80, 80), (130, 160))</li><li data-component="feedback" id="pygame__drawing_quiz_rect_args_3_opt_b">Опитай пак</li>
+            
+            <li data-component="answer"  id="pygame__drawing_quiz_rect_args_3_opt_c">pg.draw.rect(canvas, color, (80, 80, 130, 160))</li><li data-component="feedback" id="pygame__drawing_quiz_rect_args_3_opt_c">Опитай пак</li>
+            
+            <li data-component="answer"  id="pygame__drawing_quiz_rect_args_3_opt_d">pg.draw.rect(canvas, color, (80, 80), (50, 80))</li><li data-component="feedback" id="pygame__drawing_quiz_rect_args_3_opt_d">Опитай пак</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id6">
+<h2>Рисуване по инструкции<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>В следващите задачи можете да видите какво трябва да нарисува вашата програма, като кликнете върху бутона „Play task“. За да ви предоставим необходима информация за написване на необходимите изявления, са дадени и подробни инструкции с описания на параметрите.</p>
+<p>Имайте предвид, че преди да нарисувате, трябва да боядисате фона с подходящия цвят, за който използвате <code class="docutils literal notranslate"><span class="pre">canvas.fill</span> <span class="pre">(pg.Color</span> <span class="pre">(...))</span></code> (вместо точките посочвайте цвят).</p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - цел:</strong></p>
+<p>Начертайте мишена на бял фон, като използвате три запълнени кръга. Центровете и на трите кръга трябва да са в центъра на прозореца, а всички кръгове да бъдат изпълнени с цвят. Първо начертайте червен кръг с радиус 100, след това син със радиус 75, а след това зелен кръг с радиус 50 пиксела.</p>
+
+    </p></div></div>
+<p>Какво мислите, може ли тези кръгове да бъдат очертани в различен ред? Ако не сте сигурни какво би се случило, опитайте.</p>
+
+<div data-childcomponent="PyGame__drawing_target" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__drawing_target data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+      data-includexsrc="# -*- acsection: general-init -*-
+import pygame as pg, pygamebg
+(width, height) = (200, 200)
+canvas = pygamebg.open_window(width, height, &quot;Three circles&quot;)
+# -*- acsection: main -*-
+
+canvas.fill(pg.Color(&quot;white&quot;)) # paint background
+(cx, cy) = (width // 2, height // 2) # the center of the circles is in the middle of the window
+pg.draw.circle(canvas, pg.Color(&quot;red&quot;), (cx, cy), 100)   # red circle
+pg.draw.circle(canvas, pg.Color(&quot;blue&quot;), (cx, cy), 75)   # blue circle
+pg.draw.circle(canvas, pg.Color(&quot;green&quot;), (cx, cy), 50)  # green circle
+
+# -*- acsection: after-main -*-
+pygamebg.wait_loop()
+" data-enablecopy="true">
+
+
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Задача - патенце:</strong></p>
+<p>На зелен фон нарисувайте патенце като анимационен герой. Чертежът се състои от следните части:</p>
+<ul class="simple">
+<li><p>Глава: жълто запълнена елипса, вписана в правоъгълник с размери 320 x 300 пиксела, с горната лява върха в точка (40, 50)</p></li>
+<li><p>Граница на главата: черна елипса, рамкираща предишната елипса с линия с ширина 1</p></li>
+<li><p>Ляво око: черна запълнена елипса, вписана в правоъгълник с размери 40 x 40 пиксела с горния ляв връх в точка (130, 130)</p></li>
+<li><p>дясно око: черна запълнена елипса, вписана в правоъгълник с размери 40 x 40 пиксела, с горната лява върха в точка (280, 120)</p></li>
+<li><p>Уста (клюн): червена запълнена елипса, вписана в правоъгълник с размери 120 x 140 пиксела, с горната лява върха в точка (200, 170)</p></li>
+<li><p>Граница на устата: черна елипса, рамкираща предишната елипса с линия с ширина 1</p></li>
+</ul>
+
+    </p></div></div>
+<p>Тук имаме повече свобода с реда на рисуване, но все пак трябва да следваме някакъв ред. Опитайте се да обясните кои части от изображението трябва да бъдат нарисувани точно в този ред и кои не.</p>
+<p>Обърнете внимание, че очите са вписани в правоъгълници, които всъщност са квадратчета. Как (благодарение на това) можем да нарисуваме едни и същи очи по различен начин?</p>
+
+<div data-childcomponent="PyGame__drawing_duckling" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__drawing_duckling data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+      data-includexsrc="# -*- acsection: general-init -*-
+import pygame as pg, pygamebg
+canvas = pygamebg.open_window(400, 400, &quot;Duckling&quot;)
+# -*- acsection: main -*-
+
+# paint background
+canvas.fill(pg.Color(&quot;green&quot;))
+
+# draw head
+pg.draw.ellipse(canvas, pg.Color(&quot;yellow&quot;), (40, 50, 320, 300))
+pg.draw.ellipse(canvas, pg.Color(&quot;black&quot;), (40, 50, 320, 300), 1)
+# draw eyes
+pg.draw.ellipse(canvas, pg.Color(&quot;black&quot;), (130, 130, 40, 40))
+pg.draw.ellipse(canvas, pg.Color(&quot;black&quot;), (280, 120, 40, 40))
+# draw mouth (beak)
+pg.draw.ellipse(canvas, pg.Color(&quot;red&quot;), (200, 170, 120, 140))
+pg.draw.ellipse(canvas, pg.Color(&quot;black&quot;), (200, 170, 120, 140), 1)
+
+# -*- acsection: after-main -*-
+pygamebg.wait_loop()
+" data-enablecopy="true">
+
+
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Рисуване' data-toggle="tooltip"><a href="03_PyGame_10_Drawing.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Рисуване на прави линии и многоъгълници' data-toggle="tooltip"><a href="03_PyGame_11b_Drawing_LinePolygon.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Рисуване' data-toggle="tooltip"><a href="03_PyGame_10_Drawing.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Рисуване на прави линии и многоъгълници' data-toggle="tooltip"><a href="03_PyGame_11b_Drawing_LinePolygon.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
